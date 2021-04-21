@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import HeaderStyles from '../styles/HeaderStyles';
 
 function Header () {
@@ -6,16 +7,16 @@ function Header () {
         <HeaderStyles>
             <div className="content">
                 <div>
-                    Bake An Exception
+                    <Link to="/">Bake An Exception</Link>
                 </div>
                 <div>
-                    Order
+                     Order
                 </div>
                 <div>
-                    About
+                    <Link to="/about">About</Link>
                 </div>
                 <div>
-                    Gallery
+                    <Link to="/gallery">Gallery</Link>
                 </div>
                 <div>
                     Contact

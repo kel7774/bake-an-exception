@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-/* dark green */
-
-const HeaderStyles=styled.header`
+const HeaderStyles=styled.nav`
     height: 3rem;
     background-color: #5e8d5a;
     color: #f6b9ad;

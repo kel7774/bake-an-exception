@@ -1,18 +1,21 @@
 import React from 'react';
+import FooterStyles from '../styles/FooterStyles';
 
 function Footer() {
     return (
-        <div>
-            <div>
-                Bake An Exception © 2021
+        <FooterStyles>
+            <div className="content">
+                <div>
+                    Bake An Exception © 2021
+                </div>
+                <div>
+                    Follow Us
+                </div>
+                <div>
+                    Contact
+                </div>
             </div>
-            <div>
-                Follow Us
-            </div>
-            <div>
-                Contact
-            </div>
-        </div>
+        </FooterStyles>
     )
 }
 
