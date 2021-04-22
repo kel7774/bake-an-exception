@@ -1,12 +1,16 @@
 import React from 'react';
+import HeroStyles from '../styles/HeroStyles';
+import Rolls from '../assets/photos/DinnerRolls.png';
+import Cookies from '../assets/photos/BreakUpCookies.png';
+import LemonCurdCake from '../assets/photos/LemonCurdCake.png';
 
 function Hero(){
     return (
-        <div className="hero">
-            <img src={"../assets/photos/BreakUpCookies.png"} height="500px" width="100px" alt="Breakup Cookies" />
-            <img src={"../assets/photos/DinnerRolls.png"} height="100px" width="100px" alt="Dinner Rolls" />
-            <img src={"../assets/photos/LemonCurdCake.png"} height="100px" width="100px" alt="Lemon Curd Cake" />
-        </div>
+        <HeroStyles>
+            <img src={Rolls} alt="Dinner Rolls" />
+            <img src={LemonCurdCake} alt="Lemon Curd Cake" />
+            <img src={Cookies} alt="Break Up Cookies" />
+        </HeroStyles>
     )
 }
 

@@ -10,7 +10,7 @@ function Header () {
                     <Link to="/">Bake An Exception</Link>
                 </div>
                 <div>
-                     Order
+                     <Link to ="/order">Order</Link>
                 </div>
                 <div>
                     <Link to="/about">About</Link>
@@ -19,7 +19,7 @@ function Header () {
                     <Link to="/gallery">Gallery</Link>
                 </div>
                 <div>
-                    Contact
+                    <Link to="/contact">Contact</Link>
                 </div>
             </div>
         </HeaderStyles>

@@ -1,8 +1,10 @@
 import React from 'react';
+import Kristina from '../assets/photos/Kristina.png';
 
 function About() {
     return (
         <div>
+            <img src={Kristina} alt="Kristina Wells Owner" />
             <p>Hi! My name's Kristina, and I believe that everyone should enjoy desserts.</p>
             <p>No exceptions.</p>
             <p>Where it all started</p>
