@@ -5,21 +5,22 @@ import Cupcake from '../assets/photos/Cupcake.png';
 
 function Order() {
   const { register } = useForm();
+  const [options, setOptions] = useState(["Cake", "Cookie", "Scone", "Bread", "Cupcakes"]);
+  console.group("register", register);
+  console.log("options: ", options);
       return (
         <OrderStyles>
             <img src={Cupcake} alt="Cupcake" />
               <form className="dropdown">
                 <label for="productType">Choose an Item:</label>
-                    <select {...register} id="item">
-                        <option selected value="cake">Cake</option>
-                        <option value="bread">Bread</option>
-                        <option value="cookie">Cookie</option>
-                        <option value="scone">Scone</option>
-                </select>
+                    <select {...register("type")}>
+                        {options.map((e, i) => 
+                          <option value={i} key={i}>{e}</option>
+                        )}
+                    </select>
               </form>
         </OrderStyles>
       )
-
 }
 
 export default Order;
