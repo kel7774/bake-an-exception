@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input, select {
+  border-radius: 0.4rem;
+  border: 0.25rem, solid, black;
+}
+
+label {
+  font-size: 12px;
+}
+
 a {
   color: black;
   text-decoration: none;
