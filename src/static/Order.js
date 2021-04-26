@@ -13,24 +13,32 @@ function Order() {
 
       return (
         <OrderStyles>
-            <img src={Cupcake} alt="Cupcake" />
-              <form className="dropdown">
-                <label for="productType">Choose an Item:</label>
-                    <select onChange={e => handleChange(e)} value={options.value} {...register("type")}>
-                        {options.map((option, i) => 
-                          <option value={option.value} key={i}>{option}</option>
-                        )}
-                    </select>
-              </form>
-              {
-                options[0] ? <div>cake</div> : 
-                options[1] ? <div>cookie</div> :
-                options[2] ? <div>scone</div> :
-                options[3] ? <div>bread</div> :
-                options[4] ? <div>cupcakes</div> :
-                null
-              }
-        </OrderStyles>
+          <img src={Cupcake} alt="Cupcake" />
+            <form className="dropdown">
+              <label for="productType">Choose an Item:</label>
+                  <select 
+                    {...register("type")}
+                    onChange={e => handleChange(e)} 
+                    value={options.value} 
+                  >
+                      {options.map((option, i) => 
+                        <div>
+                          <option 
+                            value={option.value} 
+                            key={i}
+                          >
+                            {option}
+                          </option>
+                          {option === "Cake" && (<div>cake</div>)}
+                          {option === "Cupcake" && (<div>cupcake</div>)}
+                          {option === "Bread" && (<div>bread</div>)}
+                          {option === "Scone" && (<div>scone</div>)}
+                          {option === "Cookie" && (<div>cookie</div>)}
+                        </div>
+                      )}
+                  </select>
+            </form>
+      </OrderStyles>
       )
 }
 
