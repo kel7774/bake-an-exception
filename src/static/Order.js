@@ -7,16 +7,18 @@ function Order() {
   const { register } = useForm();
   const [options, setOptions] = useState(["Cake", "Cookie", "Scone", "Bread", "Cupcakes"]);
   const handleChange = (e) => {
-    setOptions(e);
+    e.preventDefault();
+    setOptions(e.target.value);
   }
+
       return (
         <OrderStyles>
             <img src={Cupcake} alt="Cupcake" />
-              <form className="dropdown" onChange={handleChange}>
+              <form className="dropdown">
                 <label for="productType">Choose an Item:</label>
-                    <select {...register("type")}>
-                        {options.map((e, i) => 
-                          <option value={i} key={i}>{e}</option>
+                    <select onChange={e => handleChange(e)} value={options.value} {...register("type")}>
+                        {options.map((option, i) => 
+                          <option value={option.value} key={i}>{option}</option>
                         )}
                     </select>
               </form>
