@@ -7,6 +7,9 @@ margin: 0 0.5rem;
     .fieldLabel {
         display: flex;
         flex-direction: column;
+        label {
+            font-size: 1rem;
+        }
     }
 `;
 
