@@ -6,7 +6,7 @@ import CakeForm from '../components/CakeForm';
 
 function Order () {
   const { register } = useForm();
-  const [options, setOptions] = useState(["Cake", "Cookie", "Scone", "Bread", "Cupcake"]);
+  const [options, setOptions] = useState([" ", "Cake", "Cookie", "Scone", "Bread", "Cupcake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
   function handleChange (e) {
     e.preventDefault();
@@ -16,7 +16,7 @@ function Order () {
     <OrderStyles>
       <img src={Cupcake} alt="Cupcake" />
         <form className="dropdown">
-          <label for="productType">Choose an Item:</label>
+          <label for="productType">Choose An Item:</label>
             <select 
               {...register("type")}
               onChange={e => handleChange(e)} 
