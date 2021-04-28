@@ -5,12 +5,22 @@ import Cupcake from '../assets/photos/Cupcake.png';
 import CakeForm from '../components/CakeForm';
 
 function Order () {
-  const { register } = useForm();
+  const { register, handleSubmit, formState: { errors }  } = useForm();
   const [options, setOptions] = useState([" ", "Cake", "Cookie", "Scone", "Bread", "Cupcake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
+  const [selectedTiers, setSelectedTiers] = useState(undefined);
+  const [selectedLayers, setSelectedLayers] = useState(undefined);
   function handleChange (e) {
     e.preventDefault();
     setSelectedOption(e.target.value);
+  }
+  function handleTiers (e) {
+    e.preventDefault();
+    setSelectedTiers(e.target.value);
+  }
+  function handleLayers (e) {
+    e.preventDefault();
+    setSelectedLayers(e.target.value);
   }
   return (
     <OrderStyles>
@@ -32,7 +42,17 @@ function Order () {
               )}
             </select>
 ​
-            {selectedOption === "Cake" && (<div><CakeForm /></div>)}
+            {selectedOption === "Cake" && (
+              <div className="selected-form-container">
+                <CakeForm 
+                  register={register} 
+                  handleSubmit={handleSubmit} 
+                  errors={errors}
+                  handleTiers={handleTiers}
+                  handleLayers={handleLayers}
+                />
+              </div>
+            )}
             {selectedOption === "Cupcake" && (<div>cupcake</div>)}
             {selectedOption === "Bread" && (<div>bread</div>)}
             {selectedOption === "Scone" && (<div>scone</div>)}

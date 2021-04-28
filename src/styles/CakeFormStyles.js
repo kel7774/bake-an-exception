@@ -15,6 +15,9 @@ const CakeFormStyles=styled.div`
             label {
                 font-size: 0.8rem;
             }
+            p { 
+                font-size: 0.8rem;
+            }
         }
     }
 `;
