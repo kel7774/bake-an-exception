@@ -1,5 +1,5 @@
 import React from 'react';
-import { FacebookIcon, InstapaperIcon } from 'react-share';
+import { FacebookIcon } from 'react-share';
 import FooterStyles from '../styles/FooterStyles';
 
 function Footer() {
@@ -15,7 +15,6 @@ function Footer() {
                     <div>
                         <a href="https://www.facebook.com/BakeAnException" target="_blank" >
                             <FacebookIcon size={15} round={true} />
-                            <InstapaperIcon size={15} round={true} />
                         </a>
                     </div>
                 </div>
