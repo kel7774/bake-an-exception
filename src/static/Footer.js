@@ -1,9 +1,9 @@
 import React from 'react';
-import { FacebookIcon } from 'react-share';
+import Instagram from '../assets/icons/Instagram';
+import Facebook from '../assets/icons/Facebook';
 import FooterStyles from '../styles/FooterStyles';
 
 function Footer() {
-    const facebook = `https://www.facebook.com/BakeAnException`;
     return (
         <FooterStyles>
             <div className="content">
@@ -12,14 +12,21 @@ function Footer() {
                 </div>
                 <div>
                     Follow Us
-                    <div>
-                        <a href="https://www.facebook.com/BakeAnException" target="_blank" >
-                            <FacebookIcon size={15} round={true} />
-                        </a>
+                    <div className="icon-container">
+                        <div className="svg-container">
+                            <a href="https://www.facebook.com/BakeAnException" rel="noreferrer" target="_blank" >
+                                <Facebook />
+                            </a>
+                        </div>
+                        <div className="svg-container" >
+                            <a href="https://instagram.com/BakeAnExcpetion" rel="noreferrer" target="_blank">
+                                <Instagram />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    Contact
+                    Made with <span>🖤</span> by <a href="https://github.com/kel7774" rel="noreferrer" target="_blank">Kelli Landry</a>
                 </div>
             </div>
         </FooterStyles>

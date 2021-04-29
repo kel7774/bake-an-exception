@@ -4,7 +4,7 @@ import Kristina from '../assets/photos/Kristina.png';
 function About() {
     return (
         <div>
-            <img src={Kristina} alt="Kristina Wells Owner" />
+            <img src={Kristina} alt="Kristina Wells Owner" style={{borderRadius: `120px 20px 120px 20px`}} />
             <p>Hi! My name's Kristina, and I believe that everyone should enjoy desserts.</p>
             <p>No exceptions.</p>
             <p>Where it all started</p>
