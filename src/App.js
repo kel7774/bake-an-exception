@@ -1,12 +1,12 @@
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from './static/Header';
-import Landing from './static/Landing';
-import Order from './static/Order';
-import About from './static/About';
-import Gallery from './static/Gallery';
-import Contact from './static/Contact';
-import Footer from './static/Footer';
+import Header from './components/Header';
+import Landing from './pages/Landing';
+import Order from './pages/Order';
+import About from './pages/About';
+import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (

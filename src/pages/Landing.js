@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../static/Hero';
+import Hero from '../components/Hero';
 
 function Landing(){
     return (

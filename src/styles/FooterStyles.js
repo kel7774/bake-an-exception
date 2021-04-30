@@ -5,7 +5,10 @@ const FooterStyles=styled.footer`
     height: 4rem;
     position: fixed;
     bottom: 0;
-    background-color: #f6b9ad;
+    background-color: #F6B5A9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
         .content {
             display: flex;
             flex-direction: row;
@@ -14,10 +17,10 @@ const FooterStyles=styled.footer`
                 .icon-container {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-around;
                         .svg-container {
                             height: 30px;
                             width: 30px;
+                            margin: 0.4rem;
                         }
                 }
         }

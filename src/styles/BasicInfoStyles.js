@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CakeFormStyles=styled.div`
+const BasicInfoStyles=styled.div`
     display: flex;
     justify-content: center;
     margin: 0 0.5rem;
@@ -23,4 +23,4 @@ const CakeFormStyles=styled.div`
     }
 `;
 
-export default CakeFormStyles;
+export default BasicInfoStyles;

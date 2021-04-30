@@ -10,6 +10,10 @@ const Styles = styled.div`
         img {
             height: 30rem;
             width: 25rem;
+            border-radius: 120px 20px 120px 20px;
+            opacity: 3;
+            transition: opacity 2s;
+            -webkit-transition: opacity 2s;
         }
 `;
 

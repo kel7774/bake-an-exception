@@ -10,19 +10,16 @@ function Footer() {
                 <div>
                     Bake An Exception © 2021
                 </div>
-                <div>
-                    Follow Us
-                    <div className="icon-container">
-                        <div className="svg-container">
-                            <a href="https://www.facebook.com/BakeAnException" rel="noreferrer" target="_blank" >
-                                <Facebook />
-                            </a>
-                        </div>
-                        <div className="svg-container" >
-                            <a href="https://instagram.com/BakeAnExcpetion" rel="noreferrer" target="_blank">
-                                <Instagram />
-                            </a>
-                        </div>
+                <div className="icon-container">
+                    <div className="svg-container">
+                        <a href="https://www.facebook.com/BakeAnException" rel="noreferrer" target="_blank" >
+                            <Facebook />
+                        </a>
+                    </div>
+                    <div className="svg-container" >
+                        <a href="https://instagram.com/bakeanexception" rel="noreferrer" target="_blank">
+                            <Instagram />
+                        </a>
                     </div>
                 </div>
                 <div>
