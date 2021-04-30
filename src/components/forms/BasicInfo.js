@@ -1,7 +1,7 @@
 import React from 'react';
 import BasicInfoStyles from '../../styles/BasicInfoStyles';
 
-function BasicInfo ({ register, errors }) {
+function BasicInfo ({ register, errors, firstName, lastName, email, phoneNumber }) {
     return(
         <BasicInfoStyles>
             <div className="row-container">
@@ -10,7 +10,8 @@ function BasicInfo ({ register, errors }) {
                         <input 
                             type="text"
                             name="firstName"
-                            placeholder="First Name" 
+                            placeholder="First Name"
+                            value={firstName} 
                             {...register("firstName", { required: true })}
                         />
                         {errors.firstName && "First name is required."}
@@ -21,6 +22,7 @@ function BasicInfo ({ register, errors }) {
                             type="text"
                             name="lastName"
                             placeholder="Last Name"
+                            value={lastName}
                             {...register("lastName", { required: true })} 
                         />
                         {errors.lastName && "Last name is required."}
@@ -33,6 +35,7 @@ function BasicInfo ({ register, errors }) {
                             type="email"
                             name="email"
                             placeholder="Email Address"
+                            value={email}
                             {...register("email", {
                                 required: "required",
                                 pattern: {
@@ -49,6 +52,7 @@ function BasicInfo ({ register, errors }) {
                             type="phone"
                             name="phoneNumber"
                             placeholder="Phone Number"
+                            value={phoneNumber}
                             {...register("phoneNumber", { required: true })} 
                         />
                         {errors.phoneNumber && "Phone number is required."}

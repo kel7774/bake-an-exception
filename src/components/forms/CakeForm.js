@@ -2,12 +2,26 @@ import React from 'react';
 import BasicInfo from './BasicInfo';
 import CakeFormStyles from '../../styles/CakeFormStyles';
 
-function CakeForm ({ register, handleSubmit, errors, handleTiers, handleLayers  }) {
-    const onSubmit = data => console.log(data);
+function CakeForm ({ 
+    register, 
+    errors, 
+    handleTiers, 
+    handleLayers, 
+    firstName, 
+    lastName, 
+    email, 
+    phoneNumber  
+}) {
     return (
         <CakeFormStyles>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <BasicInfo register={register} errors={errors}/>
+                <BasicInfo 
+                    register={register} 
+                    errors={errors} 
+                    firstName={firstName} 
+                    lastName={lastName} 
+                    email={email} 
+                    phoneNumber={phoneNumber} 
+                />
                 <div className="row-container">
                     <div className="fieldLabel">
                         <label for="tiers">How many tiers?</label>
@@ -41,7 +55,6 @@ function CakeForm ({ register, handleSubmit, errors, handleTiers, handleLayers  
                     </div>
                 </div>
                 <input type="submit" />
-            </form>
         </CakeFormStyles>
     )
 }
