@@ -12,6 +12,8 @@ function CakeForm ({ register, handleSubmit, errors, handleTiers, handleLayers  
                     <div className="fieldLabel">
                         <label for="tiers">How many tiers?</label>
                         <select 
+                            name="tiers"
+                            id="tiers"
                             {...register("tiers", { required: true })} 
                             onChange={(e) => handleTiers(e)}
                         >
@@ -25,6 +27,8 @@ function CakeForm ({ register, handleSubmit, errors, handleTiers, handleLayers  
                         <label for="layers">How many layers?*</label>
                         <p>*Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.</p>
                         <select 
+                            name="layers"
+                            id="layers"
                             {...register("layers", { required: true })} 
                             onChange={(e) => handleLayers(e)}
                         >

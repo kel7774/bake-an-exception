@@ -25,13 +25,15 @@ function Order () {
     setSelectedLayers(e.target.value);
   }
   return (
-    <OrderStyles>
+    <OrderStyles className="order-page-container">
       <div className="img-container">
         <img src={Cupcake} alt="Cupcake" />
       </div>
         <form className="dropdown">
           <label for="productType">Choose An Item:</label>
             <select 
+              id="type"
+              name="type"
               {...register("type")}
               onChange={e => handleChange(e)} 
               value={options.value} 
