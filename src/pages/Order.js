@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import * as emailjs from 'emailjs-com';
+import { sendForm, init } from 'emailjs-com';
 import OrderStyles from '../styles/OrderStyles';
 import Cupcake from '../assets/photos/Cupcake.png';
 import BasicInfo from '../components/forms/BasicInfo';
@@ -9,6 +9,7 @@ import CookieForm from '../components/forms/CookieForm';
 import CupcakeForm from '../components/forms/CupcakeForm';
 
 function Order () {
+  const user_name = init('user_h88MUUL2z7LyThRYixx88');
   const { register, handleSubmit, formState: { errors }  } = useForm();
   const [firstName, setFirstName] = useState(undefined);
   const [lastName, setLastName] = useState(undefined);
@@ -21,13 +22,12 @@ function Order () {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 function sendEmail(e) {
-  emailjs.send('service_d3eb9m9', 'template_mvxqgvp', e.target, 'user_h88MUUL2z7LyThRYixx88')
+  sendForm('service_d3eb9m9', 'template_mvxqgvp', '.dropdown', user_name)
   .then((result) => {
     console.log('result: ', result.text, result.status);
     console.log('register: ', register);
     console.log('name:', firstName);
   }, (error) => {
-    e.preventDefault();
     console.log('error: ',error.text);
   });
 }
@@ -76,7 +76,9 @@ function sendEmail(e) {
     handleLastName={handleLastName}
     handleEmail={handleEmail}
     handlePhoneNumber={handlePhoneNumber}
-/>;
+  />;
+
+  const submitButton = <input type="submit" />
 
   return (
     <OrderStyles className="order-page-container">
@@ -110,6 +112,7 @@ function sendEmail(e) {
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}
                 />
+                {submitButton}
               </div>
             )}
             {selectedOption === "Cupcake" && (
@@ -119,6 +122,7 @@ function sendEmail(e) {
                   register={register} 
                   errors={errors}
                 />
+                {submitButton}
               </div>
             )}
             {selectedOption === "Cookie" && (
@@ -128,6 +132,7 @@ function sendEmail(e) {
                   register={register} 
                   errors={errors}
                 />
+                {submitButton}
               </div>
             )}
         </form>

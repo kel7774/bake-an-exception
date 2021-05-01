@@ -41,7 +41,6 @@ function CakeForm ({
                         {errors.layers && "Must select number of layers"}
                     </div>
                 </div>
-                <input type="submit" />
         </CakeFormStyles>
     )
 }
