@@ -25,8 +25,6 @@ function sendEmail(e) {
   sendForm('service_d3eb9m9', 'template_mvxqgvp', '.dropdown', user_name)
   .then((result) => {
     console.log('result: ', result.text, result.status);
-    console.log('register: ', register);
-    console.log('name:', firstName);
   }, (error) => {
     console.log('error: ',error.text);
   });

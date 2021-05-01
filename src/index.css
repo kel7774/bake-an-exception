@@ -9,7 +9,7 @@ body {
 }
 
 input, select {
-  font-family: 'Kameron', Georgia, sans-serif;
+  font-family: 'Kameron', sans-serif;
   border-radius: 0.4rem;
   border: 0.25rem, solid, black;
 }
