@@ -1,5 +1,4 @@
 import React from 'react';
-import BasicInfo from './BasicInfo';
 import CakeFormStyles from '../../styles/CakeFormStyles';
 
 function CakeForm ({ 
@@ -7,24 +6,12 @@ function CakeForm ({
     errors, 
     handleTiers, 
     handleLayers, 
-    firstName, 
-    lastName, 
-    email, 
-    phoneNumber  
 }) {
     return (
         <CakeFormStyles>
-                <BasicInfo 
-                    register={register} 
-                    errors={errors} 
-                    firstName={firstName} 
-                    lastName={lastName} 
-                    email={email} 
-                    phoneNumber={phoneNumber} 
-                />
                 <div className="row-container">
                     <div className="fieldLabel">
-                        <label for="tiers">How many tiers?</label>
+                        <label htmlFor="tiers">How many tiers?</label>
                         <select 
                             name="tiers"
                             id="tiers"
@@ -38,7 +25,7 @@ function CakeForm ({
                         {errors.tiers && "Must select number of tiers"}
                     </div>
                     <div className="fieldLabel">
-                        <label for="layers">How many layers?*</label>
+                        <label htmlFor="layers">How many layers?*</label>
                         <p>*Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.</p>
                         <select 
                             name="layers"

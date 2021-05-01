@@ -3,31 +3,52 @@ import { useForm } from 'react-hook-form';
 import * as emailjs from 'emailjs-com';
 import OrderStyles from '../styles/OrderStyles';
 import Cupcake from '../assets/photos/Cupcake.png';
+import BasicInfo from '../components/forms/BasicInfo';
 import CakeForm from '../components/forms/CakeForm';
 import CookieForm from '../components/forms/CookieForm';
 import CupcakeForm from '../components/forms/CupcakeForm';
 
 function Order () {
   const { register, handleSubmit, formState: { errors }  } = useForm();
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [firstName, setFirstName] = useState(undefined);
+  const [lastName, setLastName] = useState(undefined);
+  const [email, setEmail] = useState(undefined);
+  const [phoneNumber, setPhoneNumber] = useState(undefined);
   const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
   const [selectedTiers, setSelectedTiers] = useState(undefined);
   const [selectedLayers, setSelectedLayers] = useState(undefined);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  function submit(e) {
+function sendEmail(e) {
+  emailjs.send('service_d3eb9m9', 'template_mvxqgvp', e.target, 'user_h88MUUL2z7LyThRYixx88')
+  .then((result) => {
+    console.log('result: ', result.text, result.status);
+    console.log('register: ', register);
+    console.log('name:', firstName);
+  }, (error) => {
     e.preventDefault();
-    let templateParams = {};
-    emailjs.send(
-      'gmail',
-      'template',
-      'templateParams',
-      'user___'
-    )
+    console.log('error: ',error.text);
+  });
+}
+  function handleFirstName (e) {
+    e.preventDefault();
+    setFirstName(e.target.value);
+  };
+
+  function handleLastName (e) {
+    e.preventDefault();
+    setLastName(e.target.value);
+  };
+
+  function handleEmail (e) {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
+
+  function handlePhoneNumber (e) {
+    e.preventDefault();
+    setPhoneNumber(e.target.value);
   }
 
   function handleChange (e) {
@@ -43,13 +64,27 @@ function Order () {
     setSelectedLayers(e.target.value);
   }
 
+  const BasicInfoForm = 
+  <BasicInfo 
+    register={register}
+    errors={errors}
+    firstName={firstName}
+    lastName={lastName}
+    email={email}
+    phoneNumber={phoneNumber}
+    handleFirstName={handleFirstName}
+    handleLastName={handleLastName}
+    handleEmail={handleEmail}
+    handlePhoneNumber={handlePhoneNumber}
+/>;
+
   return (
     <OrderStyles className="order-page-container">
       <div className="img-container">
         <img src={Cupcake} alt="Cupcake" />
       </div>
-        <form className="dropdown" onSubmit={handleSubmit(submit)}>
-          <label for="productType">Choose An Item:</label>
+        <form className="dropdown" onSubmit={handleSubmit(sendEmail)}>
+          <label htmlFor="productType">Choose An Item:</label>
             <select 
               id="type"
               name="type"
@@ -68,13 +103,10 @@ function Order () {
             </select>
             {selectedOption === "Cake" && (
               <div className="selected-form-container">
+                {BasicInfoForm}
                 <CakeForm 
                   register={register} 
                   errors={errors}
-                  firstName={firstName}
-                  lastName={lastName}
-                  email={email}
-                  phoneNumber={phoneNumber}
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}
                 />
@@ -82,25 +114,19 @@ function Order () {
             )}
             {selectedOption === "Cupcake" && (
               <div className="selected-form-container">
+                {BasicInfoForm}
                 <CupcakeForm 
                   register={register} 
                   errors={errors}
-                  firstName={firstName}
-                  lastName={lastName}
-                  email={email}
-                  phoneNumber={phoneNumber}
                 />
               </div>
             )}
             {selectedOption === "Cookie" && (
               <div className="selected-form-container">
+                {BasicInfoForm}
                 <CookieForm 
                   register={register} 
                   errors={errors}
-                  firstName={firstName}
-                  lastName={lastName}
-                  email={email}
-                  phoneNumber={phoneNumber}
                 />
               </div>
             )}
