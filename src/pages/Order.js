@@ -17,8 +17,11 @@ function Order () {
   const [phoneNumber, setPhoneNumber] = useState(undefined);
   const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
+  const [size, setSize] = ([" ", "Round - 6in", "Round - 8in", "Round - 10in", "Sheet - Serves 6"]);
   const [selectedTiers, setSelectedTiers] = useState(undefined);
   const [selectedLayers, setSelectedLayers] = useState(undefined);
+  const [cakeFlavors, setCakeFlavors] = useState(' ');
+  const [fillings, setFillings] = useState(' ');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 function sendEmail(e) {
@@ -53,13 +56,30 @@ function sendEmail(e) {
     e.preventDefault();
     setSelectedOption(e.target.value);
   }
+
+  function handleSize (e) {
+    e.preventDefault();
+    setSize(e.target.value);
+  }
+
   function handleTiers (e) {
     e.preventDefault();
     setSelectedTiers(e.target.value);
   }
+
   function handleLayers (e) {
     e.preventDefault();
     setSelectedLayers(e.target.value);
+  }
+
+  function handleCakeFlavors (e) {
+    e.preventDefault();
+    setCakeFlavors(e.target.value);
+  }
+
+  function handleFillings(e) {
+    e.preventDefault();
+    setFillings(e.target.value);
   }
 
   const BasicInfoForm = 
@@ -107,8 +127,12 @@ function sendEmail(e) {
                 <CakeForm 
                   register={register} 
                   errors={errors}
+                  size={size}
+                  handleSize={handleSize}
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}
+                  handleCakeFlavors={handleCakeFlavors}
+                  handleFillings={handleFillings}
                 />
                 {submitButton}
               </div>

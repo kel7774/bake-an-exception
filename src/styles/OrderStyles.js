@@ -14,13 +14,17 @@ const OrderStyles=styled.div`
     .dropdown {
         display: flex;
         flex-direction: column;
-        margin: 0 1rem;
+        align-items: baseline;
+        margin: 1rem 1rem;
         width: 50%;
             label {
                 font-size: 2rem;
             }
             select, .selected-form-container  {
-                width: 30%;
+                width: 66%;
+            }
+            .selected-form-container {
+                margin: 1rem 0;
             }
     }
 `;
