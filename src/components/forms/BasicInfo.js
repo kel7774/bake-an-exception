@@ -14,7 +14,7 @@ function BasicInfo ({
     handlePhoneNumber
 }) {
     return(
-        <BasicInfoStyles>
+        <BasicInfoStyles className="basic-info-container">
             <div className="row-container">
                     <div className="fieldLabel">
                         <label htmlFor='firstName'>First Name</label>

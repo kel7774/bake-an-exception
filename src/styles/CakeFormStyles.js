@@ -2,8 +2,18 @@ import styled from 'styled-components';
 
 const CakeFormStyles=styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     margin: 1rem 0;
+    .drop-down-container, .text-container {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+    }
+    .drop-down-container {
+        display: flex;
+        flex-direction: row;
+    }
     .fieldLabel {
         display: flex;
         flex-direction: column;
@@ -13,7 +23,10 @@ const CakeFormStyles=styled.div`
             font-size: 0.8rem;
         }
         p { 
-            font-size: 0.8rem;
+            font-size: 0.5rem;
+        }
+        #size {
+            width: 100%;
         }
     }
 `;

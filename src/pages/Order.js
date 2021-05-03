@@ -17,11 +17,12 @@ function Order () {
   const [phoneNumber, setPhoneNumber] = useState(undefined);
   const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
-  const [size, setSize] = ([" ", "Round - 6in", "Round - 8in", "Round - 10in", "Sheet - Serves 6"]);
+  const [size, setSize] = useState(undefined);
   const [selectedTiers, setSelectedTiers] = useState(undefined);
   const [selectedLayers, setSelectedLayers] = useState(undefined);
   const [cakeFlavors, setCakeFlavors] = useState(' ');
   const [fillings, setFillings] = useState(' ');
+  const [colorTheme, setColorTheme] = useState(' ');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 function sendEmail(e) {
@@ -82,6 +83,11 @@ function sendEmail(e) {
     setFillings(e.target.value);
   }
 
+  function handleColorTheme (e) {
+    e.preventDefault();
+    setColorTheme(e.target.value);
+  }
+
   const BasicInfoForm = 
   <BasicInfo 
     register={register}
@@ -127,12 +133,12 @@ function sendEmail(e) {
                 <CakeForm 
                   register={register} 
                   errors={errors}
-                  size={size}
                   handleSize={handleSize}
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}
                   handleCakeFlavors={handleCakeFlavors}
                   handleFillings={handleFillings}
+                  handleColorTheme={handleColorTheme}
                 />
                 {submitButton}
               </div>
