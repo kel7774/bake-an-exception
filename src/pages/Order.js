@@ -23,6 +23,7 @@ function Order () {
   const [cakeFlavors, setCakeFlavors] = useState(' ');
   const [fillings, setFillings] = useState(' ');
   const [colorTheme, setColorTheme] = useState(' ');
+  const [isChecked, setIsChecked] = useState('No');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 function sendEmail(e) {
@@ -88,6 +89,11 @@ function sendEmail(e) {
     setColorTheme(e.target.value);
   }
 
+  function handleChecked (e) {
+    e.preventDefault();
+    setIsChecked(e.target.value);
+  }
+
   const BasicInfoForm = 
   <BasicInfo 
     register={register}
@@ -110,7 +116,7 @@ function sendEmail(e) {
         <img src={Cupcake} alt="Cupcake" />
       </div>
         <form className="dropdown" onSubmit={handleSubmit(sendEmail)}>
-          <label htmlFor="productType">Choose An Item:</label>
+          <label className="choose-label" htmlFor="productType">Choose An Item:</label>
             <select 
               id="type"
               name="type"
@@ -139,6 +145,9 @@ function sendEmail(e) {
                   handleCakeFlavors={handleCakeFlavors}
                   handleFillings={handleFillings}
                   handleColorTheme={handleColorTheme}
+                  handleChecked={handleChecked}
+                  isChecked={isChecked}
+                  setIsChecked={setIsChecked}
                 />
                 {submitButton}
               </div>

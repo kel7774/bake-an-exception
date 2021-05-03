@@ -17,11 +17,14 @@ const OrderStyles=styled.div`
         align-items: baseline;
         margin: 1rem 1rem;
         width: 50%;
+            .productType {
+                margin: 1rem 0;
+            }
             label {
                 font-size: 2rem;
             }
             select, .selected-form-container  {
-                width: 66%;
+                width: 71%;
             }
             .selected-form-container {
                 margin: 1rem 0;

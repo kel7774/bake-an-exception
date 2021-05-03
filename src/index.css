@@ -8,6 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input[type="submit"] {
+  background-color:#5e8d5a;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 input {
   padding: 0.5rem;
 }
