@@ -1,18 +1,19 @@
 import React from 'react';
+import { Controller } from 'react-hook-form';
+import { FormControlLabel, RadioGroup, Radio } from '@material-ui/core';
 import CakeFormStyles from '../../styles/CakeFormStyles';
 
 function CakeForm ({ 
     register, 
     errors, 
+    control,
     handleSize,
     handleTiers, 
     handleLayers, 
     handleCakeFlavors,
     handleFillings,
     handleColorTheme,
-    isChecked,
-    setIsChecked,
-    handleChecked
+    DeliveryInfoForm
 }) {
     return (
         <CakeFormStyles className="cake-form">
@@ -95,24 +96,38 @@ function CakeForm ({
                             onChange={(e) => handleColorTheme(e)}
                         />
                     </div>
-            </div>
+                </div>
+                {/* <div className="image-upload">
+                    <input 
+                        type="file"
+                        name="file"
+                        {...register}
+                    />
+                </div> */}
                     <div className="delivery">
                         <div className="fieldLabel">
-                            <label htmlFor="delivery">Will you need your order delivered?**</label>
-                            <input 
-                                type="radio" 
-                                name="delivery-yes" 
-                                checked={isChecked === "Yes"}
-                                onChange={(e) => handleChecked(e.target.value)}
-                                {...register('delivery-yes', { required: true })}
-                            />Yes
-                            <input 
-                                type="radio" 
-                                name="delivery-no" 
-                                checked={isChecked === "No"}
-                                onChange={(e) => handleChecked(e.target.value)}
-                                {...register('delivery-no', { required: true })}
-                            />No
+                            <label>Would you like this order delivered?**</label>
+                            <Controller 
+                                render={({ field }) => (
+                                <RadioGroup aria-label="delivery" {...field}>
+                                        <FormControlLabel 
+                                            value="Yes"
+                                            control={<Radio />}
+                                            label="Yes"
+                                        />
+                                        <FormControlLabel 
+                                            value="No"
+                                            control={<Radio />}
+                                            label="No"
+                                        />
+                                    </RadioGroup>
+                                )}
+                                name="Delivery"
+                                control={control}
+                                rules={{ required: true }}
+                                defaultValue="No"
+                            />
+                            {DeliveryInfoForm}
                         </div>
                     </div>
             <p>*Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.</p>

@@ -54,7 +54,7 @@ function BasicInfo ({
                                 required: "required",
                                 pattern: {
                                     value: /\S+@\S+.\S+/,
-                                    message: "Entered value does not match email format"
+                                    message: "Entered value does not match email format."
                                 }
                             })}
                         />
@@ -63,12 +63,18 @@ function BasicInfo ({
                     <div className="fieldLabel">
                         <label htmlFor='phoneNumber'>Phone Number</label>
                         <input 
-                            type="phone"
+                            type="tel"
                             name="phoneNumber"
                             placeholder="Phone Number"
                             value={phoneNumber}
                             onChange={(e) => handlePhoneNumber(e)}
-                            {...register("phoneNumber", { required: true })} 
+                            {...register("phoneNumber", {
+                                required: "required",
+                                pattern: {
+                                    value: /\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/
+                                }
+                            }
+                            )}
                         />
                         {errors.phoneNumber && "Phone number is required."}
                     </div>

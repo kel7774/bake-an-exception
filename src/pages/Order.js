@@ -4,18 +4,20 @@ import { sendForm, init } from 'emailjs-com';
 import OrderStyles from '../styles/OrderStyles';
 import Cupcake from '../assets/photos/Cupcake.png';
 import BasicInfo from '../components/forms/BasicInfo';
+import DeliveryInfo from '../components/forms/DeliveryInfo';
 import CakeForm from '../components/forms/CakeForm';
 import CookieForm from '../components/forms/CookieForm';
 import CupcakeForm from '../components/forms/CupcakeForm';
+import CheesecakeForm from '../components/forms/CheesecakeForm'
 
 function Order () {
   const user_name = init('user_h88MUUL2z7LyThRYixx88');
-  const { register, handleSubmit, formState: { errors }  } = useForm();
+  const { register, handleSubmit, formState: { errors }, control } = useForm();
   const [firstName, setFirstName] = useState(undefined);
   const [lastName, setLastName] = useState(undefined);
   const [email, setEmail] = useState(undefined);
   const [phoneNumber, setPhoneNumber] = useState(undefined);
-  const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake"]);
+  const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake", "Cheesecake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
   const [size, setSize] = useState(undefined);
   const [selectedTiers, setSelectedTiers] = useState(undefined);
@@ -23,7 +25,6 @@ function Order () {
   const [cakeFlavors, setCakeFlavors] = useState(' ');
   const [fillings, setFillings] = useState(' ');
   const [colorTheme, setColorTheme] = useState(' ');
-  const [isChecked, setIsChecked] = useState('No');
   const [formSubmitted, setFormSubmitted] = useState(false);
 
 function sendEmail(e) {
@@ -89,11 +90,6 @@ function sendEmail(e) {
     setColorTheme(e.target.value);
   }
 
-  function handleChecked (e) {
-    e.preventDefault();
-    setIsChecked(e.target.value);
-  }
-
   const BasicInfoForm = 
   <BasicInfo 
     register={register}
@@ -107,6 +103,8 @@ function sendEmail(e) {
     handleEmail={handleEmail}
     handlePhoneNumber={handlePhoneNumber}
   />;
+
+  const DeliveryInfoForm = <DeliveryInfo register={register} errors={errors} />
 
   const submitButton = <input type="submit" />
 
@@ -139,15 +137,14 @@ function sendEmail(e) {
                 <CakeForm 
                   register={register} 
                   errors={errors}
+                  control={control}
                   handleSize={handleSize}
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}
                   handleCakeFlavors={handleCakeFlavors}
                   handleFillings={handleFillings}
                   handleColorTheme={handleColorTheme}
-                  handleChecked={handleChecked}
-                  isChecked={isChecked}
-                  setIsChecked={setIsChecked}
+                  DeliveryInfoForm={DeliveryInfoForm}
                 />
                 {submitButton}
               </div>
@@ -166,6 +163,16 @@ function sendEmail(e) {
               <div className="selected-form-container">
                 {BasicInfoForm}
                 <CookieForm 
+                  register={register} 
+                  errors={errors}
+                />
+                {submitButton}
+              </div>
+            )}
+            {selectedOption === "Cheesecake" && (
+              <div className="selected-form-container">
+                {BasicInfoForm}
+                <CheesecakeForm 
                   register={register} 
                   errors={errors}
                 />
