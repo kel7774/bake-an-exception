@@ -7,6 +7,7 @@ function CakeForm ({
     register, 
     errors, 
     control,
+    fileUpload,
     handleSize,
     handleTiers, 
     handleLayers, 
@@ -97,13 +98,14 @@ function CakeForm ({
                         />
                     </div>
                 </div>
-                {/* <div className="image-upload">
+                <div className="image-upload">
                     <input 
                         type="file"
                         name="file"
                         {...register}
+                        onChange={fileUpload}
                     />
-                </div> */}
+                </div>
                     <div className="delivery">
                         <div className="fieldLabel">
                             <label>Would you like this order delivered?**</label>

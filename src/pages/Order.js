@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendForm, init } from 'emailjs-com';
+import { app } from '../base';
 import OrderStyles from '../styles/OrderStyles';
 import Cupcake from '../assets/photos/Cupcake.png';
 import BasicInfo from '../components/forms/BasicInfo';
@@ -26,6 +27,15 @@ function Order () {
   const [fillings, setFillings] = useState(' ');
   const [colorTheme, setColorTheme] = useState(' ');
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+function fileUpload(e) {
+  const file = e.target.files[0];
+  const storageRef = app.storage().ref();
+  const fileRef = storageRef.child(file.name);
+  fileRef.put(file).then(() => {
+    console.log("Uploaded file");
+  })
+}
 
 function sendEmail(e) {
   sendForm('service_d3eb9m9', 'template_mvxqgvp', '.dropdown', user_name)
@@ -138,6 +148,7 @@ function sendEmail(e) {
                   register={register} 
                   errors={errors}
                   control={control}
+                  fileUpload={fileUpload}
                   handleSize={handleSize}
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}
