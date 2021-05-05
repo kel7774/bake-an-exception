@@ -18,7 +18,7 @@ input {
   padding: 0.5rem;
 }
 
-input, select {
+input, select, textarea {
   font-family: 'Kameron', sans-serif;
   border-radius: 0.4rem;
   border: 0.25rem, solid, black;
