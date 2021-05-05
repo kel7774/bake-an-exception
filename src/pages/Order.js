@@ -10,7 +10,8 @@ import CakeForm from '../components/forms/CakeForm';
 import CookieForm from '../components/forms/CookieForm';
 import CupcakeForm from '../components/forms/CupcakeForm';
 import CheesecakeForm from '../components/forms/CheesecakeForm'
-
+/// todo: shove user_name in env
+// todo: finish other forms w/ kristina's requests
 function Order () {
   const user_name = init('user_h88MUUL2z7LyThRYixx88');
   const { register, handleSubmit, formState: { errors }, control } = useForm();
@@ -20,6 +21,7 @@ function Order () {
   const [phoneNumber, setPhoneNumber] = useState(undefined);
   const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake", "Cheesecake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
+  const [quantity, setQuantity] = useState(undefined);
   const [size, setSize] = useState(undefined);
   const [selectedTiers, setSelectedTiers] = useState(undefined);
   const [selectedLayers, setSelectedLayers] = useState(undefined);
@@ -78,6 +80,11 @@ function sendEmail(e) {
   function handleChange (e) {
     e.preventDefault();
     setSelectedOption(e.target.value);
+  }
+
+  function handleQuantity (e) {
+    e.preventDefault();
+    setQuantity(e.target.value);
   }
 
   function handleSize (e) {
@@ -180,6 +187,8 @@ function sendEmail(e) {
                 <CupcakeForm 
                   register={register} 
                   errors={errors}
+                  handleQuantity={handleQuantity}
+                  handleFillings={handleFillings}
                 />
                 {submitButton}
               </div>

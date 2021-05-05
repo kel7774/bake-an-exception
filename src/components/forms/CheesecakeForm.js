@@ -1,8 +1,8 @@
 import React from 'react';
 
-function CheesecakeForm () {
+function CheesecakeForm ({ register, errors, handleFillings }) {
     return (
-        <div>
+        <div className="cheesecake-form">
             cheesecake
         </div>
     )
