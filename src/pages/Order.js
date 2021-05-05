@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendForm, init } from 'emailjs-com';
-import { app } from '../base';
+import { useStorage } from '../hooks/useStorage';
 import OrderStyles from '../styles/OrderStyles';
 import Cupcake from '../assets/photos/Cupcake.png';
 import BasicInfo from '../components/forms/BasicInfo';
@@ -27,15 +27,24 @@ function Order () {
   const [fillings, setFillings] = useState(' ');
   const [colorTheme, setColorTheme] = useState(' ');
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState(null);
+  const types = ["image/png", "image/jpeg", "image/jpg"];
 
-function fileUpload(e) {
-  const file = e.target.files[0];
-  const storageRef = app.storage().ref();
-  const fileRef = storageRef.child(file.name);
-  fileRef.put(file).then(() => {
-    console.log("Uploaded file");
-  })
-}
+  function handleUpload (e) {
+    let selectedFile = e.target.files[0];
+        if (selectedFile) {
+            if (types.includes(selectedFile.type)) {
+                setError(null);
+                setFile(selectedFile);
+            } else {
+                setFile(null);
+                setError("Please select an image file (png or jpg)");
+            }
+        }
+  }
+
+const { progress, url } = useStorage(file);
 
 function sendEmail(e) {
   sendForm('service_d3eb9m9', 'template_mvxqgvp', '.dropdown', user_name)
@@ -45,6 +54,7 @@ function sendEmail(e) {
     console.log('error: ',error.text);
   });
 }
+
   function handleFirstName (e) {
     e.preventDefault();
     setFirstName(e.target.value);
@@ -147,8 +157,12 @@ function sendEmail(e) {
                 <CakeForm 
                   register={register} 
                   errors={errors}
+                  error={error}
                   control={control}
-                  fileUpload={fileUpload}
+                  handleUpload={handleUpload}
+                  progress={progress}
+                  url={url}
+                  file={file}
                   handleSize={handleSize}
                   handleTiers={handleTiers}
                   handleLayers={handleLayers}

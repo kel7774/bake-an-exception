@@ -1,5 +1,5 @@
 {
-    "storage": {
-      "rules": "storage.rules"
-    }
+  "storage": {
+    "rules": "storage.rules"
   }
+}

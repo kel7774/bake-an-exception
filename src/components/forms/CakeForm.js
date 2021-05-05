@@ -7,7 +7,11 @@ function CakeForm ({
     register, 
     errors, 
     control,
-    fileUpload,
+    progress,
+    url,
+    error,
+    file,
+    handleUpload,
     handleSize,
     handleTiers, 
     handleLayers, 
@@ -101,10 +105,13 @@ function CakeForm ({
                 <div className="image-upload">
                     <input 
                         type="file"
-                        name="file"
-                        {...register}
-                        onChange={fileUpload}
+                        name="picture"
+                        {...register("picture")}
+                        onChange={handleUpload}
                     />
+                    {error && <p>{error}</p>}
+                    {file && <p>{progress}% uploaded</p>}
+                    {url && <img height="100px" width="100px" src={url} alt={url}></img>}
                 </div>
                     <div className="delivery">
                         <div className="fieldLabel">
