@@ -5,10 +5,17 @@ const FooterStyles=styled.footer`
     height: 4rem;
     position: fixed;
     bottom: 0;
-    background-color: #F6B5A9;
+    color: #fff4e6;
+    background-color: #3c2f2f;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    a {
+        color: #fff4e6;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
         .content {
             display: flex;
             flex-direction: row;

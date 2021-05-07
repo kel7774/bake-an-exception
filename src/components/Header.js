@@ -10,7 +10,10 @@ function Header () {
                     <Link to="/">Bake An Exception</Link>
                 </div>
                 <div>
-                     <Link to ="/order">Order</Link>
+                    <Link to="/shop">Shop</Link>
+                </div>
+                <div>
+                     <Link to ="/order">Custom Order</Link>
                 </div>
                 <div>
                     <Link to="/about">About</Link>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { sendForm, init } from 'emailjs-com';
+import sendEmail from '../helpers/sendEmail';
 import { useStorage } from '../hooks/useStorage';
 import OrderStyles from '../styles/OrderStyles';
 import Cupcake from '../assets/photos/Cupcake.png';
@@ -11,15 +11,13 @@ import CookieForm from '../components/forms/CookieForm';
 import CupcakeForm from '../components/forms/CupcakeForm';
 import CheesecakeForm from '../components/forms/CheesecakeForm'
 /// todo: shove user_name in env
-// todo: finish other forms w/ kristina's requests
 function Order () {
-  const user_name = init('user_h88MUUL2z7LyThRYixx88');
   const { register, handleSubmit, formState: { errors }, control } = useForm();
   const [firstName, setFirstName] = useState(undefined);
   const [lastName, setLastName] = useState(undefined);
   const [email, setEmail] = useState(undefined);
   const [phoneNumber, setPhoneNumber] = useState(undefined);
-  const [options, setOptions] = useState([" ", "Cake", "Cookie", "Cupcake", "Cheesecake"]);
+  const [options, setOptions] = useState(["", "Cake", "Cookie", "Cupcake", "Cheesecake"]);
   const [selectedOption, setSelectedOption] = useState(undefined);
   const [quantity, setQuantity] = useState(undefined);
   const [size, setSize] = useState(undefined);
@@ -47,15 +45,6 @@ function Order () {
   }
 
 const { progress, url } = useStorage(file);
-
-function sendEmail(e) {
-  sendForm('service_d3eb9m9', 'template_mvxqgvp', '.dropdown', user_name)
-  .then((result) => {
-    console.log('result: ', result.text, result.status);
-  }, (error) => {
-    console.log('error: ',error.text);
-  });
-}
 
   function handleFirstName (e) {
     e.preventDefault();

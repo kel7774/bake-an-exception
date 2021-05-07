@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { init, sendForm } from 'emailjs-com';
+import sendEmail from '../helpers/sendEmail';
+import OreoCheesecake from '../assets/photos/OreoCheesecake.png';
+import FruitLoopCake from '../assets/photos/FruitLoopCake.png';
 import ContactForm from '../components/forms/ContactForm';
 import ContactStyles from '../styles/ContactStyles';
 
@@ -11,16 +13,6 @@ function Contact() {
     const [phoneNumber, setPhoneNumber] = useState(undefined);
     const [comment, setComment] = useState(undefined);
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const user_name = init('user_h88MUUL2z7LyThRYixx88');
-
-    function sendEmail(e) {
-        sendForm('service_d3eb9m9', 'template_mvxqgvp', '.dropdown', user_name)
-        .then((result) => {
-          console.log('result: ', result.text, result.status);
-        }, (error) => {
-          console.log('error: ',error.text);
-        });
-      }
 
     const handleFirstName = (e) => {
         e.preventDefault();
@@ -45,6 +37,8 @@ function Contact() {
     return (
         <ContactStyles className="contact-page-container">
             <h1>Contact Us</h1>
+            <img src={OreoCheesecake} alt="Oreo Cheesecake" />
+            <img src={FruitLoopCake} alt="Fruit Loop Cake" />
             <p>Want to drop us a line? Have a question about a product or order? Just want to tell us how awesome we are? Fill out the form, and we'll get back to you ASAP.</p>
             <p>Have a sweet day!</p>
             <ContactForm 

@@ -23,7 +23,7 @@ function Footer() {
                     </div>
                 </div>
                 <div>
-                    Made with <span>🖤</span> by <a href="https://github.com/kel7774" rel="noreferrer" target="_blank">Kelli Landry</a>
+                    Made with <span alt="Love">❤️</span> by <a href="https://github.com/kel7774" rel="noreferrer" target="_blank">Kelli Landry</a>
                 </div>
             </div>
         </FooterStyles>

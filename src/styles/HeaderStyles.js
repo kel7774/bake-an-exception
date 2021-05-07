@@ -2,12 +2,18 @@ import styled from 'styled-components';
 
 const HeaderStyles=styled.nav`
     height: 3rem;
-    background-color: #f6b9ad;
-    color: #f6b9ad;
+    background-color: #3c2f2f;
+    color: #fff4e6;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    a {
+        color: #fff4e6;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
         .content {
             margin: 0 0.5rem;
             display: flex;

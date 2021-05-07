@@ -136,7 +136,8 @@ function CakeForm ({
                                 rules={{ required: true }}
                                 defaultValue="No"
                             />
-                            {DeliveryInfoForm}
+                            {"yes" === "Yes" && DeliveryInfoForm}
+                            
                         </div>
                     </div>
             <p>*Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.</p>

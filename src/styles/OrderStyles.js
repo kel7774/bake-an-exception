@@ -22,9 +22,11 @@ const OrderStyles=styled.div`
             }
             label {
                 font-size: 2rem;
+                text-transform: uppercase;
             }
             select, .selected-form-container  {
                 width: 71%;
+                padding: 0.5rem;
             }
             .selected-form-container {
                 margin: 1rem 0;

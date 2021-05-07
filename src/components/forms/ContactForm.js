@@ -18,7 +18,7 @@ function ContactForm({
     sendEmail
 }) {
     return (
-        <ContactStyles className="contact-form">
+        <ContactStyles className="contact-form-container">
             <form onSubmit={handleSubmit(sendEmail)}>
                 <div className="fieldLabel">
                     <label htmlFor='firstName'>First Name</label>
@@ -72,6 +72,7 @@ function ContactForm({
                     <label htmlFor="comment">Leave us a note:</label>
                     <textarea
                         type="text"
+                        className="comment-textarea"
                         name="comment"
                         placeholder="Comment..."
                         value={comment}
