@@ -15,7 +15,6 @@ function BasicInfo ({
 }) {
     return(
         <BasicInfoStyles className="basic-info-container">
-            <div className="row-container">
                     <div className="fieldLabel">
                         <label htmlFor='firstName'>First Name</label>
                         <input 
@@ -40,8 +39,6 @@ function BasicInfo ({
                         />
                         {errors.lastName && "Last name is required."}
                     </div>
-                </div>
-                <div className="row-container">
                     <div className="fieldLabel">
                         <label htmlFor='email'>Email Address</label>
                         <input 
@@ -78,7 +75,6 @@ function BasicInfo ({
                         />
                         {errors.phoneNumber && "Phone number is required."}
                     </div>
-                </div>
         </BasicInfoStyles>
         
     )
