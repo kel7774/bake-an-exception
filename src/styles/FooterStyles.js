@@ -5,8 +5,8 @@ const FooterStyles=styled.footer`
     height: 4rem;
     position: fixed;
     bottom: 0;
-    color: #fff4e6;
-    background-color: #3c2f2f;
+    color: var(--gold);
+    background-color: var(--darkLavendar);
     display: flex;
     flex-direction: column;
     justify-content: center;

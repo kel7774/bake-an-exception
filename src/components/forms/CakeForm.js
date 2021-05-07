@@ -7,6 +7,7 @@ function CakeForm ({
     register, 
     errors, 
     control,
+    watch,
     progress,
     url,
     error,
@@ -20,6 +21,8 @@ function CakeForm ({
     handleColorTheme,
     DeliveryInfoForm
 }) {
+    console.log('control', control);
+    const watchRadio = watch("radio", "No");
     return (
         <CakeFormStyles className="cake-form">
             <div className="dropdown-container">
@@ -117,27 +120,29 @@ function CakeForm ({
                         <div className="fieldLabel">
                             <label>Would you like this order delivered?**</label>
                             <Controller 
-                                render={({ field }) => (
-                                <RadioGroup aria-label="delivery" {...field}>
-                                        <FormControlLabel 
-                                            value="Yes"
-                                            control={<Radio />}
-                                            label="Yes"
-                                        />
-                                        <FormControlLabel 
-                                            value="No"
-                                            control={<Radio />}
-                                            label="No"
-                                        />
-                                    </RadioGroup>
-                                )}
+                                {...register("Delivery")}
                                 name="Delivery"
+                                defaultValue="No"
                                 control={control}
                                 rules={{ required: true }}
-                                defaultValue="No"
+                                render={({ field }) => (
+                                <RadioGroup aria-label="delivery" {...field}>
+                                    <FormControlLabel
+                                        {...register('radio')}
+                                        value="Yes"
+                                        control={<Radio />}
+                                        label="Yes"
+                                    />
+                                    <FormControlLabel 
+                                        {...register('radio')}
+                                        value="No"
+                                        control={<Radio />}
+                                        label="No"
+                                    />
+                                    </RadioGroup>
+                                )}
+                                {...watchRadio === 'Yes' && {DeliveryInfoForm} }
                             />
-                            {"yes" === "Yes" && DeliveryInfoForm}
-                            
                         </div>
                     </div>
             <p>*Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.</p>

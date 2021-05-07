@@ -12,7 +12,7 @@ import CupcakeForm from '../components/forms/CupcakeForm';
 import CheesecakeForm from '../components/forms/CheesecakeForm'
 /// todo: shove user_name in env
 function Order () {
-  const { register, handleSubmit, formState: { errors }, control } = useForm();
+  const { register, handleSubmit, formState: { errors }, control, watch } = useForm();
   const [firstName, setFirstName] = useState(undefined);
   const [lastName, setLastName] = useState(undefined);
   const [email, setEmail] = useState(undefined);
@@ -155,6 +155,7 @@ const { progress, url } = useStorage(file);
                   errors={errors}
                   error={error}
                   control={control}
+                  watch={watch}
                   handleUpload={handleUpload}
                   progress={progress}
                   url={url}

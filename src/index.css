@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+:root {
+  --turquoise: #509092;
+  --lightBlue: #88A2A8;
+  --lightLavendar: #6D5D79;
+  --darkLavendar: #544461;
+  --gold: #F4E4BC;
+}
+
 html {
-  background: linear-gradient(#be9b7b, #5e4134) no-repeat center fixed;
+  background: linear-gradient(#509092, #88A2A8) no-repeat center fixed;
   background-size: cover;
 }
 
@@ -14,7 +22,7 @@ body {
 }
 
 input[type="submit"] {
-  background-color: #3c2f2f;
+  background-color: var(--darkLavendar);
   color: #fff4e6;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -24,19 +32,15 @@ input {
   padding: 0.5rem;
 }
 
-
-
 input, select, textarea {
   font-family: 'Kameron', sans-serif;
   border-radius: 0.7rem;
-  border: 0.5rem, solid, #3c2f2f;
+  border: 0.5rem, solid, var(--darkLavendar);
 }
 
 a {
-  color: black;
   text-decoration: none;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
