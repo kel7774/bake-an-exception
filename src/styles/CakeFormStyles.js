@@ -19,6 +19,10 @@ const CakeFormStyles=styled.div`
         flex-direction: column;
         align-items: baseline;
         margin: 0 0.5rem;
+        span {
+            background-color: var(--darkLavendar);
+            border-radius: 0.3rem;
+        }
         .Mui-checked {
             color: var(--gold);
         }

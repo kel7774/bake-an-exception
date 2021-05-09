@@ -130,7 +130,7 @@ const { progress, url } = useStorage(file);
         <img src={Cupcake} alt="Cupcake" />
       </div>
         <form className="dropdown" onSubmit={handleSubmit(sendEmail)}>
-          <label className="choose-label" htmlFor="productType">Choose An Item:</label>
+          <label className="choose-label" htmlFor="productType"><span>Choose An Item:</span></label>
             <select 
               id="type"
               name="type"

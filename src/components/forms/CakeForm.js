@@ -26,7 +26,7 @@ function CakeForm ({
         <CakeFormStyles className="cake-form">
             <div className="dropdown-container">
                 <div className="fieldLabel">
-                        <label htmlFor="size">Choose a Size:</label>
+                        <label htmlFor="size"><span>Choose a Size:</span></label>
                         <select 
                             name="size"
                             id="size"
@@ -43,7 +43,7 @@ function CakeForm ({
                         {errors.tiers && "Must select a size"}
                     </div>
                     <div className="fieldLabel">
-                        <label htmlFor="tiers">How many tiers?</label>
+                        <label htmlFor="tiers"><span>How many tiers?</span></label>
                         <select 
                             name="tiers"
                             id="tiers"
@@ -57,7 +57,7 @@ function CakeForm ({
                         {errors.tiers && "Must select number of tiers"}
                     </div>
                     <div className="fieldLabel">
-                        <label htmlFor="layers">How many layers?*</label>
+                        <label htmlFor="layers"><span>How many layers?*</span></label>
                         <select 
                             name="layers"
                             id="layers"
@@ -74,7 +74,7 @@ function CakeForm ({
             </div>
             <div className="text-container">
                 <div className="fieldLabel">
-                        <label htmlFor="flavors">Cake Flavor Requests:</label>
+                        <label htmlFor="flavors"><span>Cake Flavor Requests:</span></label>
                         <input 
                             type="text" 
                             name="flavors" 
@@ -84,7 +84,7 @@ function CakeForm ({
                         />
                     </div>
                     <div className="fieldLabel">
-                        <label htmlFor="fillings">Cake Filling Requests:</label>
+                        <label htmlFor="fillings"><span>Cake Filling Requests:</span></label>
                         <input 
                             type="text" 
                             name="fillings" 
@@ -94,7 +94,7 @@ function CakeForm ({
                         />
                     </div>
                     <div className="fieldLabel">
-                        <label htmlFor="color-theme">Color Theme:</label>
+                        <label htmlFor="color-theme"><span>Color Theme:</span></label>
                         <input 
                             type="text" 
                             name="color-theme" 
@@ -117,7 +117,7 @@ function CakeForm ({
                 </div> */}
                     <div className="delivery">
                         <div className="fieldLabel">
-                            <label>Would you like this order delivered?**</label>
+                            <label><span>Would you like this order delivered?**</span></label>
                             <Controller 
                                 name="Delivery"
                                 defaultValue="No"

@@ -7,6 +7,11 @@ const BasicInfoStyles=styled.div`
             display: flex;
             flex-direction: column;
             align-items: baseline;
+            color: var(--gold);
+            span {
+                background-color: var(--darkLavendar);
+                border-radius: 0.3rem;
+            }
             label {
                 font-size: 0.8rem;
             }

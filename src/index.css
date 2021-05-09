@@ -16,9 +16,16 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Rubik', sans-serif;
    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
 input[type="submit"] {

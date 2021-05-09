@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const FooterStyles=styled.footer`
     width: 100%;
-    height: 4rem;
     position: fixed;
     bottom: 0;
     color: var(--gold);
@@ -20,6 +19,7 @@ const FooterStyles=styled.footer`
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             margin: 0 0.5rem;
                 .icon-container {
                     display: flex;

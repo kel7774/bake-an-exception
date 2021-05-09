@@ -14,21 +14,23 @@ img {
     form {
         display: flex;
         flex-direction: row;
-    }
-    .fieldLabel {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 1rem 1.5rem;
-            input[type="text"], input[type="tel"], input[type="email"], textarea {
-                border-radius: 1rem;
-                padding: 0.5rem;
-                resize: none;
-                width: 100%;
+        align-items: center;
+            .fieldLabel {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 1rem 1.5rem;
+                    input[type="text"], input[type="tel"], input[type="email"], textarea {
+                        border-radius: 1rem;
+                        padding: 0.5rem;
+                    }
+                    input[type="submit"] {
+                        height: fit-content;
+                    }
+                .comment-textarea {
+                    height: 40%;
+                }
             }
-        .comment-textarea {
-            height: 40%;
-        }
     }
 }
 `;
