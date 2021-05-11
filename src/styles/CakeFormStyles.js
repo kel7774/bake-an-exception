@@ -6,7 +6,7 @@ const CakeFormStyles=styled.div`
     justify-content: flex-start;
     margin: 1rem 1rem 0 0;
     span {
-        background-color: var(--darkLavendar);
+        background-color: var(--darkLavender);
         border-radius: 0.3rem;
         color: var(--gold);
     }
@@ -25,7 +25,7 @@ const CakeFormStyles=styled.div`
         align-items: baseline;
         margin: 0 0.5rem;
         span {
-            background-color: var(--darkLavendar);
+            background-color: var(--darkLavender);
             border-radius: 0.3rem;
             color: var(--gold);
         }

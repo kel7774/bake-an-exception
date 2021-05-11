@@ -26,7 +26,7 @@ const OrderStyles=styled.div`
                 color: var(--gold);
                 margin: 0.5rem 0;
                     span {
-                        background-color: var(--darkLavendar);
+                        background-color: var(--darkLavender);
                     }
             }
             select, .selected-form-container  {

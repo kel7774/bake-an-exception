@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HeaderStyles=styled.nav`
     height: 3rem;
-    background-color: var(--darkLavendar);
+    background-color: var(--darkLavender);
     color: var(--gold);
     text-transform: uppercase;
     display: flex;

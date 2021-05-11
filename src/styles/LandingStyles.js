@@ -12,7 +12,7 @@ const LandingStyles = styled.div`
         color: var(--gold);
     }
     h1 span, h3 span {
-        background-color: var(--darkLavendar);
+        background-color: var(--darkLavender);
     }
 
 `;

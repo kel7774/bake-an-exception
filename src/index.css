@@ -4,9 +4,10 @@
 :root {
   --turquoise: #509092;
   --lightBlue: #88A2A8;
-  --lightLavendar: #6D5D79;
-  --darkLavendar: #544461;
+  --lightLavender: #6D5D79;
+  --darkLavender: #544461;
   --gold: #F4E4BC;
+  --darkBlue: #078082;
 }
 
 html {
@@ -29,24 +30,39 @@ main {
 }
 
 input[type="submit"] {
-  background-color: var(--darkLavendar);
+  background-color: var(--darkLavender);
   color: #fff4e6;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
-input {
-  padding: 0.5rem;
-}
-
 input, select, textarea {
   font-family: 'Kameron', sans-serif;
   border-radius: 0.7rem;
-  border: 0.5rem, solid, var(--darkLavendar);
+  border: 0.5rem, solid, var(--darkLavender);
+  padding: 0.5rem;
+  background-color: var(--darkBlue);
+  color: var(--gold);
+}
+
+::placeholder {
+  color: var(--gold);
+}
+
+:-ms-input-placeholder {
+  color: var(--gold);
+}
+
+::-ms-input-placeholder {
+  color: var(--gold);
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 code {

@@ -5,16 +5,10 @@ const FooterStyles=styled.footer`
     position: fixed;
     bottom: 0;
     color: var(--gold);
-    background-color: var(--darkLavendar);
+    background-color: var(--darkLavender);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    a {
-        color: #fff4e6;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
         .content {
             display: flex;
             flex-direction: row;

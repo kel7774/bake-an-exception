@@ -9,7 +9,7 @@ const BasicInfoStyles=styled.div`
             align-items: baseline;
             color: var(--gold);
             span {
-                background-color: var(--darkLavendar);
+                background-color: var(--darkLavender);
                 border-radius: 0.3rem;
             }
             label {

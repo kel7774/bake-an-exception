@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const spanBackground = css`
+    color: var(--gold);
+    background-color: var(--darkLavender);
+`;
 
 const AboutStyles=styled.div`
     .first-section, .second-section, .third-section {
@@ -12,8 +17,7 @@ const AboutStyles=styled.div`
                     width: 25rem;
                 }
                 figcaption span {
-                    color: var(--gold);
-                    background-color: var(--darkLavendar);
+                    ${spanBackground}
                 }
             }
             .kristina-container, .derek-container, .kid-container {
@@ -23,10 +27,10 @@ const AboutStyles=styled.div`
                 justify-content: center;
                     p, em {
                         margin: 0.4rem;
+                        font-size: 1rem;
                     }
                     p span, em span {
-                        color: var(--gold);
-                        background-color: var(--darkLavendar);
+                        ${spanBackground}
                     }
             }
             .kristina-container, .kid-container {
