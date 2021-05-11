@@ -5,7 +5,7 @@ function DeliveryInfo ({ register }) {
     return (
         <DeliveryInfoStyles className="delivery-info-container">
             <div className="fieldLabel">
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address"><span>Address</span></label>
                 <input
                     {...register('address', { required: true })}
                     autoComplete="street-address"
@@ -14,7 +14,7 @@ function DeliveryInfo ({ register }) {
                 />
             </div>
             <div className="fieldLabel">
-                <label htmlFor="city">City</label>
+                <label htmlFor="city"><span>City</span></label>
                 <input 
                     {...register('city', { required: true })}
                     autoComplete="address-level2"
@@ -23,7 +23,7 @@ function DeliveryInfo ({ register }) {
                 />
             </div>
             <div className="fieldLabel">
-                <label htmlFor="zip">Zip Code</label>
+                <label htmlFor="zip"><span>Zip Code</span></label>
                 <input 
                     {...register('postalCode', { required: true })}
                     autoComplete="postal-code"
@@ -32,7 +32,7 @@ function DeliveryInfo ({ register }) {
                 />
             </div>
             <div className="fieldLabel">
-                <label>Delivery Instructions:</label>
+                <label><span>Delivery Instructions:</span></label>
                 <input 
                     {...register('deliveryInstructions')}
                     type="text"

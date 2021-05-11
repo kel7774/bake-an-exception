@@ -11,10 +11,7 @@ const LandingStyles = styled.div`
     h3 {
         color: var(--gold);
     }
-    h1 span {
-        background-color: var(--darkLavendar);
-    }
-    h3 span {
+    h1 span, h3 span {
         background-color: var(--darkLavendar);
     }
 

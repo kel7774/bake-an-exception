@@ -11,6 +11,10 @@ const AboutStyles=styled.div`
                     height: 20rem;
                     width: 25rem;
                 }
+                figcaption span {
+                    color: var(--gold);
+                    background-color: var(--darkLavendar);
+                }
             }
             .kristina-container, .derek-container, .kid-container {
                 width: 70%;
@@ -19,6 +23,10 @@ const AboutStyles=styled.div`
                 justify-content: center;
                     p, em {
                         margin: 0.4rem;
+                    }
+                    p span, em span {
+                        color: var(--gold);
+                        background-color: var(--darkLavendar);
                     }
             }
             .kristina-container, .kid-container {

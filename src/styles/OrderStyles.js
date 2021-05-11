@@ -17,11 +17,6 @@ const OrderStyles=styled.div`
         align-items: baseline;
         margin: 1rem 1rem;
         width: 50%;
-            span, p {
-                background-color: var(--darkLavendar);
-                border-radius: 0.3rem;
-                color: var(--gold);
-            }
             .productType {
                 margin: 1rem 0;
             }
@@ -30,6 +25,9 @@ const OrderStyles=styled.div`
                 text-transform: uppercase;
                 color: var(--gold);
                 margin: 0.5rem 0;
+                    span {
+                        background-color: var(--darkLavendar);
+                    }
             }
             select, .selected-form-container  {
                 width: 71%;

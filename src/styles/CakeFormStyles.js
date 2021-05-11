@@ -5,6 +5,11 @@ const CakeFormStyles=styled.div`
     flex-direction: column;
     justify-content: flex-start;
     margin: 1rem 1rem 0 0;
+    span {
+        background-color: var(--darkLavendar);
+        border-radius: 0.3rem;
+        color: var(--gold);
+    }
     .dropdown-container, .text-container {
         display: flex;
         flex-direction: row;
@@ -22,15 +27,13 @@ const CakeFormStyles=styled.div`
         span {
             background-color: var(--darkLavendar);
             border-radius: 0.3rem;
+            color: var(--gold);
         }
         .Mui-checked {
             color: var(--gold);
         }
         label {
             font-size: 0.8rem;
-        }
-        p { 
-            font-size: 0.5rem;
         }
         #size {
             width: 100%;

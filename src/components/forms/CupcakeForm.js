@@ -5,7 +5,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
     return (
         <CupcakeFormStyles className="cupcake-form">
             <div className="fieldLabel">
-                <label htmlFor="quantity">Choose Quantity:*</label>
+                <label htmlFor="quantity"><span>Choose Quantity:*</span></label>
                 <select 
                    name="quantity"
                     id="quantity"
@@ -21,7 +21,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
             </div>
             <div className="fillings-container">
                 <div className="fieldLabel">
-                    <label htmlFor="fillings">How many fillings?</label>
+                    <label htmlFor="fillings"><span>How many fillings?</span></label>
                     <select 
                         name="fillings"
                         id="fillings"
@@ -35,7 +35,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
                     {errors.tiers && "Must select number of fillings."}
                 </div>
                 <div className="fieldLabel">
-                    <label htmlFor="fillings-first">Choose First Filling:</label>
+                    <label htmlFor="fillings-first"><span>Choose First Filling:</span></label>
                     <select 
                         name="filling-1"
                         id="filling-1"
@@ -54,7 +54,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
                     {errors.filling1 && "Must select a filling."}
                 </div>
                 <div className="fieldLabel">
-                    <label htmlFor="fillings-second">Choose Second Filling:</label>
+                    <label htmlFor="fillings-second"><span>Choose Second Filling:</span></label>
                     <select 
                         name="filling2"
                         id="filling2"
@@ -74,7 +74,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
                 </div>
             </div>
             <div className="fieldLabel">
-                <label htmlFor="icing">Choose Icing:</label>
+                <label htmlFor="icing"><span>Choose Icing:</span></label>
                 <select
                     name="icing"
                     id="icing"
@@ -87,7 +87,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
                 </select>
                 {errors.icing && "Must select an icing."}
             </div>
-            <p>*Cupcakes must be ordered by the dozen at minimum.</p>
+            <p><span>*Cupcakes must be ordered by the dozen at minimum.</span></p>
         </CupcakeFormStyles>
     )
 }

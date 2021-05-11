@@ -143,8 +143,16 @@ function CakeForm ({
                             {watchRadio === "Yes" && <DeliveryInfo register={register} />}
                         </div>
                     </div>
-            <p>*Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.</p>
-            <p>**Any requests for delivery will be left strictly up to the owner's discretion. As a courtesy, we ask that you only request delivery for the following zip codes: 70501, 70503, 70508, 70505, ect. Any others will be subject for pre-approval.</p>
+            <p>
+                <span>
+                    *Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.
+                </span>
+            </p>
+            <p>
+                <span>
+                    **Any requests for delivery will be left strictly up to the owner's discretion. As a courtesy, we ask that you only request delivery for the following zip codes: 70501, 70503, 70508, 70505, ect. Any others will be subject for pre-approval.
+                </span>
+            </p>
         </CakeFormStyles>
     )
 }
