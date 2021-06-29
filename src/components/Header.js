@@ -5,28 +5,30 @@ import HeaderStyles from '../styles/HeaderStyles'
 function Header () {
   return (
     <HeaderStyles>
-      <div className="content">
+      <div className='home'>
         <nav>
-          <Link to="/">Bake An Exception</Link>
+          <Link to='/'>Home</Link>
+        </nav>
+      </div>
+      <div className='menu'>
+        <nav>
+          <Link to='/shop'>Shop</Link>
         </nav>
         <nav>
-          <Link to="/shop">Shop</Link>
+          <Link to='/order'>Custom Order</Link>
         </nav>
         <nav>
-          <Link to ="/order">Custom Order</Link>
+          <Link to='/about'>About</Link>
         </nav>
         <nav>
-          <Link to="/about">About</Link>
+          <Link to='/gallery'>Gallery</Link>
         </nav>
         <nav>
-          <Link to="/gallery">Gallery</Link>
-        </nav>
-        <nav>
-          <Link to="/contact">Contact</Link>
+          <Link to='/contact'>Contact</Link>
         </nav>
       </div>
     </HeaderStyles>
   )
 }
 
-export default Header;
+export default Header

@@ -2,17 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 :root {
-  --turquoise: #509092;
-  --lightBlue: #88a2a8;
-  --lightLavender: #6d5d79;
-  --darkLavender: #544461;
-  --gold: #f4e4bc;
-  --darkBlue: #078082;
+
 }
 
 html {
-  background: linear-gradient(#509092, #88a2a8) no-repeat center fixed;
-  background-size: cover;
+
 }
 
 body {

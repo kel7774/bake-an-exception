@@ -1,13 +1,13 @@
-import React from 'react';
-import AboutStyles from '../styles/AboutStyles';
-import Kristina from '../assets/photos/Kristina.png';
-import Derek from '../assets/photos/Derek.png';
-import Kids from '../assets/photos/Kids.png';
+import React from 'react'
+import AboutStyles from '../styles/AboutStyles'
+import Kristina from '../assets/photos/Kristina.png'
+import Derek from '../assets/photos/Derek.png'
+import Kids from '../assets/photos/Kids.png'
 
-function About() {
+function About () {
     return (
         <AboutStyles className="about-container">
-            <div className="first-section">
+            <section className="first-section">
                 <div className="img-container">
                     <img src={Kristina} alt="Kristina Wells Owner" />
                     <figcaption><span>That's me. Welcome! <span>🍰</span></span></figcaption>
@@ -20,8 +20,8 @@ function About() {
                     <p><span>Fast forward to 2021, &amp; I started to get requests from friends and family to make everything from birthday cakes, smash cakes, &amp; most recently, weddings cakes.</span></p>
                     <p><span>With some encouragement from my boyfriend &amp; best friend, Derek, friends, and family, I opened up for business.</span></p>
                 </div>
-            </div>
-            <div className="second-section">
+            </section>
+            <section className="second-section">
                 <div className="derek-container">
                     <p><span>The peanut butter to my jelly.</span></p>
                     <p><span>This is Derek, my best friend, partner in crime, adventure buddy, boyfriend of the century.</span></p>
@@ -33,8 +33,8 @@ function About() {
                     <img src={Derek} alt="Derek" />
                     <figcaption><span>My love. <span>🖤</span></span></figcaption>
                 </div>
-            </div>
-            <div className="third-section">
+            </section>
+            <section className="third-section">
                 <div className="img-container">
                     <img src={Kids} alt="Kids" />
                     <figcaption><span>Calvin &amp; Hobbes <span>🦁</span></span></figcaption>
@@ -43,7 +43,7 @@ function About() {
                     <p><span>And here's the reason why I do what I do.</span></p>
                     <p><span>As you can tell, they really like that I make sweets for a living! <span>😂</span></span></p>
                 </div>
-            </div>
+            </section>
         </AboutStyles>
     )
 }

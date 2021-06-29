@@ -6,13 +6,13 @@ const LandingStyles = styled.div`
         letter-spacing: 0.4rem;
         font-size: 7rem;
         font-weight: normal;
-        color: var(--gold);
+        color: black;
     }
     h3 {
-        color: var(--gold);
+        color: black;
     }
     h1 span, h3 span {
-        background-color: var(--darkLavender);
+        // background-color: var(--darkLavender);
     }
 
 `

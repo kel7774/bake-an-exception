@@ -7,7 +7,7 @@ const BasicInfoStyles = styled.div`
             display: flex;
             flex-direction: column;
             align-items: baseline;
-            color: var(--gold);
+            color: black;
             span {
                 background-color: var(--darkLavender);
                 border-radius: 0.3rem;

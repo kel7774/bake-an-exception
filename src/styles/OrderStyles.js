@@ -23,7 +23,7 @@ const OrderStyles = styled.div`
             label {
                 font-size: 2rem;
                 text-transform: uppercase;
-                color: var(--gold);
+                color: black;
                 margin: 0.5rem 0;
                     span {
                         background-color: var(--darkLavender);
@@ -32,6 +32,7 @@ const OrderStyles = styled.div`
             select, .selected-form-container  {
                 width: 71%;
                 padding: 0.5rem;
+                border: 1px solid black;
             }
             .selected-form-container {
                 margin: 1rem 0;

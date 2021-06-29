@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
 const spanBackground = css`
-    color: var(--gold);
-    background-color: var(--darkLavender);
+    color: black;
+
 `
 const AboutStyles = styled.div`
     .first-section, .second-section, .third-section {

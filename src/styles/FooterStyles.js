@@ -4,11 +4,12 @@ const FooterStyles = styled.footer`
     width: 100%;
     position: fixed;
     bottom: 0;
-    color: var(--gold);
-    background-color: var(--darkLavender);
+    color: black;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-top: 1px solid #eaeaea;
         .content {
             display: flex;
             flex-direction: row;

@@ -17,7 +17,7 @@ function Order () {
   const [lastName, setLastName] = useState(undefined)
   const [email, setEmail] = useState(undefined)
   const [phoneNumber, setPhoneNumber] = useState(undefined)
-  const [options, setOptions] = useState(['', 'Cake', 'Cookie', 'Cupcake', '"heesecake'])
+  const [options, setOptions] = useState(['', 'Cake', 'Cookie', 'Cupcake', 'Cheesecake'])
   const [selectedOption, setSelectedOption] = useState(undefined)
   const [quantity, setQuantity] = useState(undefined)
   const [size, setSize] = useState(undefined)
