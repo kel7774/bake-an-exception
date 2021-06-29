@@ -1,11 +1,10 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 const spanBackground = css`
     color: var(--gold);
     background-color: var(--darkLavender);
-`;
-
-const AboutStyles=styled.div`
+`
+const AboutStyles = styled.div`
     .first-section, .second-section, .third-section {
         margin: 1rem 0;
         display: flex;
@@ -40,6 +39,6 @@ const AboutStyles=styled.div`
                 text-align: right;
             }
     }
-`;
+`
 
-export default AboutStyles;
+export default AboutStyles

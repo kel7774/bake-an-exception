@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const ContactStyles = styled.div`
 img {
@@ -33,6 +33,6 @@ img {
             }
     }
 }
-`;
+`
 
-export default ContactStyles;
+export default ContactStyles

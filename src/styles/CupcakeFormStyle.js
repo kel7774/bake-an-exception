@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const CupcakeFormStyles = styled.div`
     display: flex;
@@ -22,6 +22,6 @@ const CupcakeFormStyles = styled.div`
         display: flex;
         flex-direction: row;
      }
-`;
+`
 
-export default CupcakeFormStyles;
+export default CupcakeFormStyles

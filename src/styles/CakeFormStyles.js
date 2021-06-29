@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const CakeFormStyles=styled.div`
+const CakeFormStyles = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -39,6 +39,6 @@ const CakeFormStyles=styled.div`
             width: 100%;
         }
     }
-`;
+`
 
-export default CakeFormStyles;
+export default CakeFormStyles

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Styles = styled.div`
     display: flex;
@@ -15,6 +15,6 @@ const Styles = styled.div`
             transition: opacity 2s;
             -webkit-transition: opacity 2s;
         }
-`;
+`
 
-export default Styles;
+export default Styles

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const BasicInfoStyles=styled.div`
+const BasicInfoStyles = styled.div`
     display: flex;
     justify-content: space-between;
         .fieldLabel {
@@ -19,6 +19,6 @@ const BasicInfoStyles=styled.div`
                 font-size: 0.8rem;
             }
         }
-`;
+`
 
-export default BasicInfoStyles;
+export default BasicInfoStyles

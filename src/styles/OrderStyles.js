@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const OrderStyles=styled.div`
+const OrderStyles = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,6 +37,6 @@ const OrderStyles=styled.div`
                 margin: 1rem 0;
             }
     }
-`;
+`
 
-export default OrderStyles;
+export default OrderStyles

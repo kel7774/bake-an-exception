@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const LandingStyles = styled.div`
     h1 {
@@ -15,6 +15,6 @@ const LandingStyles = styled.div`
         background-color: var(--darkLavender);
     }
 
-`;
+`
 
-export default LandingStyles;
+export default LandingStyles

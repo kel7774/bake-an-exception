@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 :root {
   --turquoise: #509092;
-  --lightBlue: #88A2A8;
-  --lightLavender: #6D5D79;
+  --lightBlue: #88a2a8;
+  --lightLavender: #6d5d79;
   --darkLavender: #544461;
-  --gold: #F4E4BC;
+  --gold: #f4e4bc;
   --darkBlue: #078082;
 }
 
 html {
-  background: linear-gradient(#509092, #88A2A8) no-repeat center fixed;
+  background: linear-gradient(#509092, #88a2a8) no-repeat center fixed;
   background-size: cover;
 }
 
@@ -19,8 +19,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Rubik', sans-serif;
-   -webkit-font-smoothing: antialiased;
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -36,25 +36,13 @@ input[type="submit"] {
   letter-spacing: 0.1rem;
 }
 
-input, select, textarea {
-  font-family: 'Kameron', sans-serif;
+input,
+select,
+textarea {
+  font-family: "Kameron", sans-serif;
   border-radius: 0.7rem;
   border: 0.5rem, solid, var(--darkLavender);
   padding: 0.5rem;
-  background-color: var(--darkBlue);
-  color: var(--gold);
-}
-
-::placeholder {
-  color: var(--gold);
-}
-
-:-ms-input-placeholder {
-  color: var(--gold);
-}
-
-::-ms-input-placeholder {
-  color: var(--gold);
 }
 
 a {
@@ -66,6 +54,6 @@ a:hover {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

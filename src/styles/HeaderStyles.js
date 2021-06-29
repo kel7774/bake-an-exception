@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const HeaderStyles=styled.nav`
+const HeaderStyles = styled.nav`
     height: 3rem;
     background-color: var(--darkLavender);
     color: var(--gold);
@@ -20,6 +20,6 @@ const HeaderStyles=styled.nav`
             flex-direction: row;
             justify-content: space-between;
         }
-`;
+`
 
-export default HeaderStyles;
+export default HeaderStyles

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const FooterStyles=styled.footer`
+const FooterStyles = styled.footer`
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -25,6 +25,6 @@ const FooterStyles=styled.footer`
                         }
                 }
         }
-`;
+`
 
-export default FooterStyles;
+export default FooterStyles

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 function CheesecakeForm ({ register, errors, handleFillings }) {
-    return (
-        <div className="cheesecake-form">
-            cheesecake
-        </div>
-    )
+  return (
+    <div className='cheesecake-form'>
+      cheesecake
+    </div>
+  )
 }
 
-export default CheesecakeForm;
+export default CheesecakeForm

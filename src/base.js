@@ -1,5 +1,5 @@
-import firebase from "firebase";
-import "firebase/storage";
+import firebase from "firebase"
+import "firebase/storage"
 
 var firebaseConfig = {
     apiKey: "AIzaSyAqTCnSZNlAOIndLNONQoBkZnTG14aAsy4",
@@ -9,9 +9,9 @@ var firebaseConfig = {
     messagingSenderId: "686506469077",
     appId: "1:686506469077:web:091018d8ce44a09f12245c",
     measurementId: "G-BE1E5GPYMX"
-  };
+  }
 
-firebase.initializeApp(firebaseConfig);
-const projectStorage = firebase.storage();
+firebase.initializeApp(firebaseConfig)
+const projectStorage = firebase.storage()
 
-export { projectStorage };
+export { projectStorage }
