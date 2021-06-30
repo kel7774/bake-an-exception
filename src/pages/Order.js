@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import sendEmail from '../helpers/sendEmail'
-import { useStorage } from '../hooks/useStorage'
 import OrderStyles from '../styles/OrderStyles'
 import Cupcake from '../assets/photos/Cupcake.png'
 import BasicInfo from '../components/forms/BasicInfo'
@@ -43,8 +42,6 @@ function Order () {
       }
     }
   }
-
-  const { progress, url } = useStorage(file)
 
   function handleFirstName (e) {
     e.preventDefault()
@@ -158,9 +155,6 @@ function Order () {
               control={control}
               watch={watch}
               handleUpload={handleUpload}
-              progress={progress}
-              url={url}
-              file={file}
               handleSize={handleSize}
               handleTiers={handleTiers}
               handleLayers={handleLayers}
