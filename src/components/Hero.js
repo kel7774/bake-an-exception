@@ -7,9 +7,9 @@ import LemonCurdCake from '../assets/photos/LemonCurdCake.png'
 function Hero () {
   return (
     <HeroStyles>
-      <img src={Rolls} alt="Dinner Rolls" />
-      <img src={LemonCurdCake} alt="Lemon Curd Cake" />
-      <img src={Cookies} alt="Break Up Cookies" />
+      <img src={Rolls} alt='Dinner Rolls' />
+      <img src={LemonCurdCake} alt='Lemon Curd Cake' />
+      <img src={Cookies} alt='Break Up Cookies' />
     </HeroStyles>
   )
 }

@@ -14,66 +14,66 @@ function BasicInfo ({
   handlePhoneNumber
 }) {
   return (
-    <BasicInfoStyles className="basic-info-container">
-      <div className="fieldLabel">
+    <BasicInfoStyles className='basic-info-container'>
+      <div className='fieldLabel'>
         <label htmlFor='firstName'><span>First Name</span></label>
         <input
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          value={firstName} 
+          type='text'
+          name='firstName'
+          placeholder='First Name'
+          value={firstName}
           onChange={(e) => handleFirstName(e)}
-          {...register("firstName", { required: true })}
+          {...register('firstName', { required: true })}
         />
-        {errors.firstName && "First name is required."}
+        {errors.firstName && 'First name is required.'}
       </div>
-      <div className="fieldLabel">
+      <div className='fieldLabel'>
         <label htmlFor='lastName'><span>Last Name</span></label>
         <input
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
+          type='text'
+          name='lastName'
+          placeholder='Last Name'
           value={lastName}
           onChange={(e) => handleLastName(e)}
-          {...register("lastName", { required: true })}
+          {...register('lastName', { required: true })}
         />
-        {errors.lastName && "Last name is required."}
+        {errors.lastName && 'Last name is required.'}
       </div>
-      <div className="fieldLabel">
+      <div className='fieldLabel'>
         <label htmlFor='email'><span>Email Address</span></label>
         <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
+          type='email'
+          name='email'
+          placeholder='Email Address'
           value={email}
           onChange={(e) => handleEmail(e)}
-          {...register("email", {
-            required: "required",
+          {...register('email', {
+            required: 'required',
             pattern: {
               value: /\S+@\S+.\S+/,
-              message: "Entered value does not match email format."
+              message: 'Entered value does not match email format.'
             }
           })}
         />
-          {errors.email && "Email address is required."}
+        {errors.email && 'Email address is required.'}
       </div>
-      <div className="fieldLabel">
+      <div className='fieldLabel'>
         <label htmlFor='phoneNumber'><span>Phone Number</span></label>
         <input
-          type="tel"
-          name="phoneNumber"
-          placeholder="Phone Number"
+          type='tel'
+          name='phoneNumber'
+          placeholder='Phone Number'
           value={phoneNumber}
           onChange={(e) => handlePhoneNumber(e)}
-          {...register("phoneNumber", {
-            required: "required",
+          {...register('phoneNumber', {
+            required: 'required',
             pattern: {
               value: /\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/
             }
           }
           )}
         />
-        {errors.phoneNumber && "Phone number is required."}
+        {errors.phoneNumber && 'Phone number is required.'}
       </div>
     </BasicInfoStyles>
   )

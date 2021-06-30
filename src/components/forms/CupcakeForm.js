@@ -26,7 +26,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
             name='fillings'
             id='fillings'
             className='quantity-fillings'
-            {...register('fillings', { required: true })} 
+            {...register('fillings', { required: true })}
             onChange={(e) => handleFillings(e)}
           >
             <option value='1'>1 Filling</option>
@@ -53,39 +53,39 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
           </select>
           {errors.filling1 && 'Must select a filling.'}
         </div>
-        <div className="fieldLabel">
-          <label htmlFor="fillings-second"><span>Choose Second Filling:</span></label>
+        <div className='fieldLabel'>
+          <label htmlFor='fillings-second'><span>Choose Second Filling:</span></label>
           <select
-            name="filling2"
-            id="filling2"
-            {...register("filling2", { required: true })}
+            name='filling2'
+            id='filling2'
+            {...register('filling2', { required: true })}
             onChange={(e) => handleFillings(e)}
           >
-            <option value="no-filling">No Filling</option>
-            <option value="lemon">Lemon</option>
-            <option value="coconut">Coconut</option>
-            <option value="bavarian-creme">Bavarian Creme</option>
-            <option value="choc-bavarian">Chocolate Bavarian Creme</option>
-            <option value="raspberry">Raspberry</option>
-            <option value="blueberry">Blueberry</option>
-            <option value="cream-cheese">Cream Cheese</option>
+            <option value='no-filling'>No Filling</option>
+            <option value='lemon'>Lemon</option>
+            <option value='coconut'>Coconut</option>
+            <option value='bavarian-creme'>Bavarian Creme</option>
+            <option value='choc-bavarian'>Chocolate Bavarian Creme</option>
+            <option value='raspberry'>Raspberry</option>
+            <option value='blueberry'>Blueberry</option>
+            <option value='cream-cheese'>Cream Cheese</option>
           </select>
-          {errors.filling2 && "Must select a filling."}
+          {errors.filling2 && 'Must select a filling.'}
         </div>
       </div>
-      <div className="fieldLabel">
-        <label htmlFor="icing"><span>Choose Icing:</span></label>
+      <div className='fieldLabel'>
+        <label htmlFor='icing'><span>Choose Icing:</span></label>
         <select
-            name="icing"
-            id="icing"
-            {...register("icing", { required: true })}
-            onChange={(e) => {}}
+          name='icing'
+          id='icing'
+          {...register('icing', { required: true })}
+          onChange={(e) => {}}
         >
-            <option value="choc-buttercream">Chocolate Buttercream</option>
-            <option value="vanilla-buttercream">Vanilla Buttercream</option>
-            <option value="marshmallow">Marshmallow</option>
+          <option value='choc-buttercream'>Chocolate Buttercream</option>
+          <option value='vanilla-buttercream'>Vanilla Buttercream</option>
+          <option value='marshmallow'>Marshmallow</option>
         </select>
-        {errors.icing && "Must select an icing."}
+        {errors.icing && 'Must select an icing.'}
       </div>
       <p><span>*Cupcakes must be ordered by the dozen at minimum.</span></p>
     </CupcakeFormStyles>
