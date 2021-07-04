@@ -1,31 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
-:root {
-
-}
-
-html {
-
-}
-
-body {
-  margin: 0;
+body, html {
   padding: 0;
-  height: 100%;
+  margin: 0;
+  height: 400px;
   font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 main {
-  padding: 2rem;
-  padding-bottom: 2rem;
+  margin: 0 2rem;
+  padding: 5rem 0;
 }
 
 input[type="submit"] {
-  background-color: var(--darkLavender);
-  color: #fff4e6;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
@@ -35,8 +26,9 @@ select,
 textarea {
   font-family: "Kameron", sans-serif;
   border-radius: 0.7rem;
-  border: 0.5rem, solid, var(--darkLavender);
+  border: 0.5rem, solid, black;
   padding: 0.5rem;
+  resize: none;
 }
 
 a {

@@ -1,7 +1,7 @@
 import React from 'react'
 import DeliveryInfoStyles from '../../styles/DeliveryInfoStyles'
 
-function DeliveryInfo ({ register }) {
+function DeliveryInfo ({ register, errors }) {
   return (
     <DeliveryInfoStyles className='delivery-info-container'>
       <div className='fieldLabel'>
@@ -12,6 +12,7 @@ function DeliveryInfo ({ register }) {
           name='address'
           placeholder='Address'
         />
+        {errors.address && 'Must enter in a street'}
       </div>
       <div className='fieldLabel'>
         <label htmlFor='city'><span>City</span></label>
@@ -21,6 +22,7 @@ function DeliveryInfo ({ register }) {
           name='city'
           placeholder='City'
         />
+        {errors.city && 'Must enter in a city'}
       </div>
       <div className='fieldLabel'>
         <label htmlFor='state'><span>State</span></label>
@@ -30,6 +32,7 @@ function DeliveryInfo ({ register }) {
           name='state'
           placeholder='State'
         />
+        {errors.state && 'Must enter in a state'}
       </div>
       <div className='fieldLabel'>
         <label htmlFor='zip'><span>Zip Code</span></label>
@@ -39,6 +42,7 @@ function DeliveryInfo ({ register }) {
           name='postalCode'
           placeholder='Zip Code'
         />
+        {errors.postalCode && 'Must enter in a zip code'}
       </div>
       <div className='fieldLabel'>
         <label><span>Delivery Instructions:</span></label>

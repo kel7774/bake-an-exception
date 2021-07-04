@@ -70,33 +70,36 @@ function CakeForm ({
       <div className='text-container'>
         <div className='fieldLabel'>
           <label htmlFor='flavors'><span>Cake Flavor Requests:</span></label>
-          <input
+          <textarea
             type='text'
             name='flavors'
             placeholder='Enter in desired flavor(s)'
             {...register('flavors', { required: true })}
             onChange={(e) => handleCakeFlavors(e)}
           />
+          {errors.flavors && 'Must enter in desired flavor(s)'}
         </div>
         <div className='fieldLabel'>
           <label htmlFor='fillings'><span>Filling Requests:</span></label>
-          <input
+          <textarea
             type='text'
             name='fillings'
             placeholder='Enter in desired filling(s)'
             {...register('fillings', { required: true })}
             onChange={(e) => handleFillings(e)}
           />
+          {errors.fillings && 'Must enter in desired filling(s)'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='color-theme'><span>Color Theme:</span></label>
-          <input
+          <label htmlFor='color-theme'><span>Theme Request:</span></label>
+          <textarea
             type='text'
-            name='color-theme'
-            placeholder='What kind of color theme are you interested in?'
-            {...register('color-theme', { required: true })}
+            name='theme'
+            placeholder='Describe your desired theme'
+            {...register('theme', { required: true })}
             onChange={(e) => handleColorTheme(e)}
           />
+          {errors.theme && 'Must enter in a desired theme'}
         </div>
       </div>
       <div className='delivery'>
@@ -124,7 +127,7 @@ function CakeForm ({
               </RadioGroup>
             )}
           />
-          {watchRadio === 'Yes' && <DeliveryInfo register={register} />}
+          {watchRadio === 'Yes' && <DeliveryInfo register={register} errors={errors} />}
         </div>
       </div>
       <p>

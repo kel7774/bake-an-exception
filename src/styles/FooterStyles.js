@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 const FooterStyles = styled.footer`
-  width: 100%;
-  position: fixed;
   bottom: 0;
+  position: fixed;
+  height: 60px;
+  width: 100%;
   color: black;
   background-color: white;
   display: flex;

@@ -8,10 +8,6 @@ const BasicInfoStyles = styled.div`
     flex-direction: column;
     align-items: baseline;
     color: black;
-    span {
-      background-color: var(--darkLavender);
-      border-radius: 0.3rem;
-    }
     label {
       font-size: 0.8rem;
     }
