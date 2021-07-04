@@ -9,7 +9,7 @@ import CakeForm from '../components/forms/CakeForm'
 import CookieForm from '../components/forms/CookieForm'
 import CupcakeForm from '../components/forms/CupcakeForm'
 import CheesecakeForm from '../components/forms/CheesecakeForm'
-/// todo: shove user_name in env
+
 function Order () {
   const { register, handleSubmit, formState: { errors }, control, watch } = useForm()
   const [firstName, setFirstName] = useState(undefined)
@@ -28,20 +28,6 @@ function Order () {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [file, setFile] = useState(null)
   const [error, setError] = useState(null)
-  const types = ['image/png', 'image/jpeg', 'image/jpg']
-
-  function handleUpload (e) {
-    let selectedFile = e.target.files[0]
-    if (selectedFile) {
-      if (types.includes(selectedFile.type)) {
-        setError(null)
-        setFile(selectedFile)
-      } else {
-        setFile(null)
-        setError('Please select an image file (png or jpg)')
-      }
-    }
-  }
 
   function handleFirstName (e) {
     e.preventDefault()
@@ -117,9 +103,7 @@ function Order () {
       handlePhoneNumber={handlePhoneNumber}
     />
   )
-
   const DeliveryInfoForm = <DeliveryInfo register={register} errors={errors} />
-
   const submitButton = <input type='submit' />
 
   return (
@@ -154,7 +138,6 @@ function Order () {
               error={error}
               control={control}
               watch={watch}
-              handleUpload={handleUpload}
               handleSize={handleSize}
               handleTiers={handleTiers}
               handleLayers={handleLayers}

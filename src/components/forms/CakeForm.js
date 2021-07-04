@@ -9,11 +9,6 @@ function CakeForm ({
   errors,
   control,
   watch,
-  progress,
-  url,
-  error,
-  file,
-  handleUpload,
   handleSize,
   handleTiers,
   handleLayers,
@@ -26,7 +21,7 @@ function CakeForm ({
     <CakeFormStyles className='cake-form'>
       <div className='dropdown-container'>
         <div className='fieldLabel'>
-          <label htmlFor='size'><span>Choose a Size:</span></label>
+          <label htmlFor='size'><span>Choose Size:</span></label>
           <select
             name='size'
             id='size'
@@ -43,7 +38,7 @@ function CakeForm ({
           {errors.tiers && 'Must select a size.'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='tiers'><span>How many tiers?</span></label>
+          <label htmlFor='tiers'><span>Choose Tiers</span></label>
           <select
             name='tiers'
             id='tiers'
@@ -57,7 +52,7 @@ function CakeForm ({
           {errors.tiers && 'Must select number of tiers'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='layers'><span>How many layers?*</span></label>
+          <label htmlFor='layers'><span>Choose Layers*</span></label>
           <select
             name='layers'
             id='layers'
@@ -84,7 +79,7 @@ function CakeForm ({
           />
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='fillings'><span>Cake Filling Requests:</span></label>
+          <label htmlFor='fillings'><span>Filling Requests:</span></label>
           <input
             type='text'
             name='fillings'
@@ -133,14 +128,10 @@ function CakeForm ({
         </div>
       </div>
       <p>
-        <span>
-          *Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.
-        </span>
+        *Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.
       </p>
       <p>
-        <span>
-          **Any requests for delivery will be left strictly up to the owner's discretion. As a courtesy, we ask that you only request delivery for the following zip codes: 70501, 70503, 70508, 70505, ect. Any others will be subject for pre-approval.
-        </span>
+        **Any requests for delivery will be left strictly up to the owner's discretion. As a courtesy, we ask that you only request delivery for the following zip codes: 70501, 70503, 70508, 70505, ect. Any others will be subject for pre-approval.
       </p>
     </CakeFormStyles>
   )

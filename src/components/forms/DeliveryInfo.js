@@ -42,7 +42,7 @@ function DeliveryInfo ({ register }) {
       </div>
       <div className='fieldLabel'>
         <label><span>Delivery Instructions:</span></label>
-        <input
+        <textarea
           {...register('deliveryInstructions')}
           type='text'
           name='deliveryInstructions'

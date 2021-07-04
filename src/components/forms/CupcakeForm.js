@@ -30,7 +30,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
             onChange={(e) => handleFillings(e)}
           >
             <option value='1'>1 Filling</option>
-            <option value='2'>2 Fillings(1/2 & 1/2)</option>
+            <option value='2'>2 Fillings(1/2 &amp; 1/2)</option>
           </select>
           {errors.tiers && 'Must select number of fillings.'}
         </div>
@@ -87,7 +87,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
         </select>
         {errors.icing && 'Must select an icing.'}
       </div>
-      <p><span>*Cupcakes must be ordered by the dozen at minimum.</span></p>
+      <p>*Cupcakes must be ordered by the dozen at minimum.</p>
     </CupcakeFormStyles>
   )
 }

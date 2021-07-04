@@ -9,7 +9,7 @@ function About () {
     <AboutStyles className='about-container'>
       <section className='first-section'>
         <div className='img-container'>
-          <img src={Kristina} alt='Kristina Wells Owner' />
+          <img src={Kristina} alt='Kristina Wells, Owner' />
           <figcaption><span>That's me. Welcome! <span>🍰</span></span></figcaption>
         </div>
         <div className='kristina-container'>
