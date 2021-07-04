@@ -22,10 +22,10 @@ function About () {
         </div>
       </section>
       <section className='second-section'>
-        <div className='"erek-container'>
+        <div className='derek-container'>
           <p><span>The peanut butter to my jelly.</span></p>
           <p><span>This is Derek, my best friend, partner in crime, adventure buddy, boyfriend of the century.</span></p>
-          <p><span>He loves playing bass, Magic, various video games, and cooking. That man can <em>cook</em> y'all.</span></p>
+          <p><span>He loves playing bass, Magic, various video games, and cooking. That man can <strong>cook</strong> y'all.</span></p>
           <p><span>If you're looking for someone who makes the best BBQ this side of Lafayette Parish, he's it.</span></p>
           <p><span>Go "here" for his website.</span></p>
         </div>
