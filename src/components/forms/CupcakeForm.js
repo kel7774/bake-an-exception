@@ -1,7 +1,7 @@
 import React from 'react'
 import CupcakeFormStyles from '../../styles/CupcakeFormStyle'
 
-function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
+function CupcakeForm ({ register, errors, handleFillings, handleQuantity, DeliveryInfoForm }) {
   return (
     <CupcakeFormStyles className='cupcake-form'>
       <div className='fieldLabel'>
@@ -87,6 +87,7 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
         </select>
         {errors.icing && 'Must select an icing.'}
       </div>
+
       <p>*Cupcakes must be ordered by the dozen at minimum.</p>
     </CupcakeFormStyles>
   )

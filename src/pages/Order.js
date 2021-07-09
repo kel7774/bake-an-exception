@@ -103,7 +103,7 @@ function Order () {
       handlePhoneNumber={handlePhoneNumber}
     />
   )
-  const DeliveryInfoForm = <DeliveryInfo register={register} errors={errors} />
+  const DeliveryInfoForm = <DeliveryInfo register={register} errors={errors} watch={watch} control={control} />
   const submitButton = <input type='submit' />
 
   return (
@@ -136,8 +136,6 @@ function Order () {
               register={register}
               errors={errors}
               error={error}
-              control={control}
-              watch={watch}
               handleSize={handleSize}
               handleTiers={handleTiers}
               handleLayers={handleLayers}
@@ -146,6 +144,7 @@ function Order () {
               handleColorTheme={handleColorTheme}
               DeliveryInfoForm={DeliveryInfoForm}
             />
+            {DeliveryInfoForm}
             {submitButton}
           </div>
         )}
@@ -158,6 +157,7 @@ function Order () {
               handleQuantity={handleQuantity}
               handleFillings={handleFillings}
             />
+            <DeliveryInfo register={register} errors={errors} />
             {submitButton}
           </div>
         )}

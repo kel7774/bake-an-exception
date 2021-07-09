@@ -21,6 +21,10 @@ input[type="submit"] {
   letter-spacing: 0.1rem;
 }
 
+label {
+  font-size: 0.8rem;
+}
+
 input,
 select,
 textarea {

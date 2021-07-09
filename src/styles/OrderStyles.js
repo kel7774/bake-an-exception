@@ -21,7 +21,6 @@ const OrderStyles = styled.div`
         margin: 1rem 0;
     }
     label {
-      font-size: 2rem;
       text-transform: uppercase;
       color: black;
       margin: 0.5rem 0;

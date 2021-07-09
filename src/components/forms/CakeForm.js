@@ -1,14 +1,9 @@
 import React from 'react'
-import { Controller } from 'react-hook-form'
-import { FormControlLabel, RadioGroup, Radio } from '@material-ui/core'
 import CakeFormStyles from '../../styles/CakeFormStyles'
-import DeliveryInfo from '../forms/DeliveryInfo'
 
 function CakeForm ({
   register,
   errors,
-  control,
-  watch,
   handleSize,
   handleTiers,
   handleLayers,
@@ -16,7 +11,6 @@ function CakeForm ({
   handleFillings,
   handleColorTheme
 }) {
-  const watchRadio = watch('Yes', 'No')
   return (
     <CakeFormStyles className='cake-form'>
       <div className='dropdown-container'>
@@ -102,39 +96,8 @@ function CakeForm ({
           {errors.theme && 'Must enter in a desired theme'}
         </div>
       </div>
-      <div className='delivery'>
-        <div className='fieldLabel'>
-          <label><span>Would you like this order delivered?**</span></label>
-          <Controller
-            name='Delivery'
-            defaultValue='No'
-            control={control}
-            rules={{ required: true }}
-            render={({ field }) => (
-              <RadioGroup aria-label='delivery' {...field}>
-                <FormControlLabel
-                  {...register('Yes')}
-                  value='Yes'
-                  control={<Radio />}
-                  label='Yes'
-                />
-                <FormControlLabel
-                  {...register('No')}
-                  value='No'
-                  control={<Radio />}
-                  label='No'
-                />
-              </RadioGroup>
-            )}
-          />
-          {watchRadio === 'Yes' && <DeliveryInfo register={register} errors={errors} />}
-        </div>
-      </div>
       <p>
         *Please note that the more layers added will result in thinner cakes. The maximum recommended number of layers on any one cake is 4.
-      </p>
-      <p>
-        **Any requests for delivery will be left strictly up to the owner's discretion. As a courtesy, we ask that you only request delivery for the following zip codes: 70501, 70503, 70508, 70505, ect. Any others will be subject for pre-approval.
       </p>
     </CakeFormStyles>
   )
