@@ -11,7 +11,7 @@ import CupcakeForm from '../components/forms/CupcakeForm'
 import CheesecakeForm from '../components/forms/CheesecakeForm'
 
 function Order () {
-  const { register, handleSubmit, formState: { errors }, control, watch } = useForm()
+  const { register, handleSubmit, formState: { errors } } = useForm()
   const [firstName, setFirstName] = useState(undefined)
   const [lastName, setLastName] = useState(undefined)
   const [email, setEmail] = useState(undefined)
@@ -25,9 +25,6 @@ function Order () {
   const [cakeFlavors, setCakeFlavors] = useState(' ')
   const [fillings, setFillings] = useState(' ')
   const [colorTheme, setColorTheme] = useState(' ')
-  const [formSubmitted, setFormSubmitted] = useState(false)
-  const [file, setFile] = useState(null)
-  const [error, setError] = useState(null)
 
   function handleFirstName (e) {
     e.preventDefault()
@@ -103,7 +100,7 @@ function Order () {
       handlePhoneNumber={handlePhoneNumber}
     />
   )
-  const DeliveryInfoForm = <DeliveryInfo register={register} errors={errors} watch={watch} control={control} />
+  const DeliveryInfoForm = <DeliveryInfo register={register} errors={errors} />
   const submitButton = <input type='submit' />
 
   return (
@@ -135,7 +132,6 @@ function Order () {
             <CakeForm
               register={register}
               errors={errors}
-              error={error}
               handleSize={handleSize}
               handleTiers={handleTiers}
               handleLayers={handleLayers}
@@ -157,7 +153,7 @@ function Order () {
               handleQuantity={handleQuantity}
               handleFillings={handleFillings}
             />
-            <DeliveryInfo register={register} errors={errors} />
+            {DeliveryInfoForm}
             {submitButton}
           </div>
         )}
@@ -168,6 +164,7 @@ function Order () {
               register={register}
               errors={errors}
             />
+            {DeliveryInfoForm}
             {submitButton}
           </div>
         )}
@@ -178,6 +175,7 @@ function Order () {
               register={register}
               errors={errors}
             />
+            {DeliveryInfoForm}
             {submitButton}
           </div>
         )}

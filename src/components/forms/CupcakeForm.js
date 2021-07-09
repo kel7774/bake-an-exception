@@ -1,7 +1,8 @@
 import React from 'react'
+import { fillingOptions } from '../../helpers/options'
 import CupcakeFormStyles from '../../styles/CupcakeFormStyle'
 
-function CupcakeForm ({ register, errors, handleFillings, handleQuantity, DeliveryInfoForm }) {
+function CupcakeForm ({ register, errors, handleFillings, handleQuantity }) {
   return (
     <CupcakeFormStyles className='cupcake-form'>
       <div className='fieldLabel'>
@@ -42,14 +43,9 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity, Delive
             {...register('filling-1', { required: true })}
             onChange={(e) => handleFillings(e)}
           >
-            <option value='no-filling'>No Filling</option>
-            <option value='lemon'>Lemon</option>
-            <option value='coconut'>Coconut</option>
-            <option value='bavarian-creme'>Bavarian Creme</option>
-            <option value='choc-bavarian'>Chocolate Bavarian Creme</option>
-            <option value='raspberry'>Raspberry</option>
-            <option value='blueberry'>Blueberry</option>
-            <option value='cream-cheese'>Cream Cheese</option>
+            {fillingOptions.map((option, i) => (
+              <option key={i} value={option.value}>{option}</option>
+            ))}
           </select>
           {errors.filling1 && 'Must select a filling.'}
         </div>
@@ -61,14 +57,9 @@ function CupcakeForm ({ register, errors, handleFillings, handleQuantity, Delive
             {...register('filling2', { required: true })}
             onChange={(e) => handleFillings(e)}
           >
-            <option value='no-filling'>No Filling</option>
-            <option value='lemon'>Lemon</option>
-            <option value='coconut'>Coconut</option>
-            <option value='bavarian-creme'>Bavarian Creme</option>
-            <option value='choc-bavarian'>Chocolate Bavarian Creme</option>
-            <option value='raspberry'>Raspberry</option>
-            <option value='blueberry'>Blueberry</option>
-            <option value='cream-cheese'>Cream Cheese</option>
+            {fillingOptions.map((option, i) => (
+              <option key={i} value={option.value}>{option}</option>
+            ))}
           </select>
           {errors.filling2 && 'Must select a filling.'}
         </div>
