@@ -13,7 +13,7 @@ function Header () {
           <div className='menu-container'>
             <li><Link to='/shop'>Shop</Link></li>
             <li><Link to='#'>Custom Order</Link>
-              <ul class='dropdown'>
+              <ul className='dropdown'>
                 <li><Link to='/cake'>Cake</Link></li>
                 <li><Link to='/cheesecake'>Cheesecake</Link></li>
                 <li><Link to='/cupcakes'>Cupcakes</Link></li>

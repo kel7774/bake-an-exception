@@ -3,13 +3,7 @@ import CakeFormStyles from '../../styles/CakeFormStyles'
 
 function CakeForm ({
   register,
-  errors,
-  handleSize,
-  handleTiers,
-  handleLayers,
-  handleCakeFlavors,
-  handleFillings,
-  handleColorTheme
+  errors
 }) {
   return (
     <CakeFormStyles className='cake-form'>
@@ -20,7 +14,6 @@ function CakeForm ({
             name='size'
             id='size'
             {...register('size', { required: true })}
-            onChange={e => handleSize(e)}
           >
             <option value='Round - 6in'>Round - 6in</option>
             <option value='Round - 8in'>Round - 8in</option>
@@ -37,7 +30,6 @@ function CakeForm ({
             name='tiers'
             id='tiers'
             {...register('tiers', { required: true })}
-            onChange={(e) => handleTiers(e)}
           >
             <option value='1'>1</option>
             <option value='2'>2</option>
@@ -51,7 +43,6 @@ function CakeForm ({
             name='layers'
             id='layers'
             {...register('layers', { required: true })}
-            onChange={(e) => handleLayers(e)}
           >
             <option value='2'>2</option>
             <option value='3'>3</option>
@@ -69,7 +60,6 @@ function CakeForm ({
             name='flavors'
             placeholder='Enter in desired flavor(s)'
             {...register('flavors', { required: true })}
-            onChange={(e) => handleCakeFlavors(e)}
           />
           {errors.flavors && 'Must enter in desired flavor(s)'}
         </div>
@@ -80,7 +70,6 @@ function CakeForm ({
             name='fillings'
             placeholder='Enter in desired filling(s)'
             {...register('fillings', { required: true })}
-            onChange={(e) => handleFillings(e)}
           />
           {errors.fillings && 'Must enter in desired filling(s)'}
         </div>
@@ -91,7 +80,6 @@ function CakeForm ({
             name='theme'
             placeholder='Describe your desired theme'
             {...register('theme', { required: true })}
-            onChange={(e) => handleColorTheme(e)}
           />
           {errors.theme && 'Must enter in a desired theme'}
         </div>

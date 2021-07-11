@@ -3,15 +3,7 @@ import BasicInfoStyles from '../../styles/BasicInfoStyles'
 
 function BasicInfo ({
   register,
-  errors,
-  firstName,
-  handleFirstName,
-  lastName,
-  handleLastName,
-  email,
-  handleEmail,
-  phoneNumber,
-  handlePhoneNumber
+  errors
 }) {
   return (
     <BasicInfoStyles className='basic-info-container'>
@@ -21,8 +13,6 @@ function BasicInfo ({
           type='text'
           name='firstName'
           placeholder='First Name'
-          value={firstName}
-          onChange={(e) => handleFirstName(e)}
           {...register('firstName', { required: true })}
         />
         {errors.firstName && 'First name is required.'}
@@ -33,8 +23,6 @@ function BasicInfo ({
           type='text'
           name='lastName'
           placeholder='Last Name'
-          value={lastName}
-          onChange={(e) => handleLastName(e)}
           {...register('lastName', { required: true })}
         />
         {errors.lastName && 'Last name is required.'}
@@ -45,8 +33,6 @@ function BasicInfo ({
           type='email'
           name='email'
           placeholder='Email Address'
-          value={email}
-          onChange={(e) => handleEmail(e)}
           {...register('email', {
             required: 'required',
             pattern: {
@@ -63,8 +49,6 @@ function BasicInfo ({
           type='tel'
           name='phoneNumber'
           placeholder='Phone Number'
-          value={phoneNumber}
-          onChange={(e) => handlePhoneNumber(e)}
           {...register('phoneNumber', {
             required: 'required',
             pattern: {

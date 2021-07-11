@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CookieForm ({ register, errors, firstName, lastName, email, phoneNumber }) {
+function CookieForm ({ register, errors }) {
   return (
     <div className='cookie-form'>
-      cookie
+      cookies
     </div>
   )
 }

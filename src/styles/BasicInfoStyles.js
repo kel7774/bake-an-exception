@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const BasicInfoStyles = styled.div`
   display: flex;
-  justify-content: space-between;
   .fieldLabel {
     display: flex;
     flex-direction: column;

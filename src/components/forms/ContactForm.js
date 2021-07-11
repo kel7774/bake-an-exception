@@ -4,16 +4,6 @@ import ContactStyles from '../../styles/ContactStyles'
 function ContactForm ({
   register,
   errors,
-  firstName,
-  lastName,
-  email,
-  phoneNumber,
-  comment,
-  handleFirstName,
-  handleLastName,
-  handleEmail,
-  handlePhoneNumber,
-  handleComment,
   handleSubmit,
   sendEmail
 }) {
@@ -26,8 +16,6 @@ function ContactForm ({
             type='text'
             name='firstName'
             placeholder='First Name'
-            value={firstName}
-            onChange={e => handleFirstName(e.target.value)}
             {...register('firstName', { required: true })}
           />
           {errors.firstName && 'First name is required.'}
@@ -38,8 +26,6 @@ function ContactForm ({
             type='text'
             name='lastName'
             placeholder='Last Name'
-            value={lastName}
-            onChange={e => handleLastName(e.target.value)}
             {...register('lastName', { required: true })}
           />
           {errors.lastName && 'Last name is required.'}
@@ -50,8 +36,6 @@ function ContactForm ({
             type='email'
             name='email'
             placeholder='Email'
-            value={email}
-            onChange={e => handleEmail(e.target.value)}
             {...register('email', { required: true })}
           />
           {errors.email && 'An email is required.'}
@@ -62,8 +46,6 @@ function ContactForm ({
             type='tel'
             name='phoneNumber'
             placeholder='Phone Number'
-            value={phoneNumber}
-            onChange={e => handlePhoneNumber(e.target.value)}
             {...register('Phone Number', { required: true })}
           />
           {errors.phoneNumber && 'A phone number is required.'}
@@ -75,8 +57,6 @@ function ContactForm ({
             className='comment-textarea'
             name='comment'
             placeholder='Comment...'
-            value={comment}
-            onChange={e => handleComment(e.target.value)}
             {...register('comment', { required: true })}
           />
         </div>
