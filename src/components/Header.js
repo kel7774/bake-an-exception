@@ -5,28 +5,27 @@ import HeaderStyles from '../styles/HeaderStyles'
 function Header () {
   return (
     <HeaderStyles>
-      <div className='home'>
-        <nav>
-          <Link to='/'>Home</Link>
-        </nav>
-      </div>
-      <div className='menu'>
-        <nav>
-          <Link to='/shop'>Shop</Link>
-        </nav>
-        <nav>
-          <Link to='/order'>Custom Order</Link>
-        </nav>
-        <nav>
-          <Link to='/about'>About</Link>
-        </nav>
-        <nav>
-          <Link to='/gallery'>Gallery</Link>
-        </nav>
-        <nav>
-          <Link to='/contact'>Contact</Link>
-        </nav>
-      </div>
+      <nav role='navigation'>
+        <ul className='full-container'>
+          <div className='home-container'>
+            <li><Link to='/'>Home</Link></li>
+          </div>
+          <div className='menu-container'>
+            <li><Link to='/shop'>Shop</Link></li>
+            <li><Link to='#'>Custom Order</Link>
+              <ul class='dropdown'>
+                <li><Link to='/cake'>Cake</Link></li>
+                <li><Link to='/cheesecake'>Cheesecake</Link></li>
+                <li><Link to='/cupcakes'>Cupcakes</Link></li>
+                <li><Link to='/cookies'>Cookies</Link></li>
+              </ul>
+            </li>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/gallery'>Gallery</Link></li>
+            <li><Link to='/contact'>Contact</Link></li>
+          </div>
+        </ul>
+      </nav>
     </HeaderStyles>
   )
 }

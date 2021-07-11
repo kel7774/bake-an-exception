@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const FooterStyles = styled.footer`
   bottom: 0;
   position: fixed;
-  height: 60px;
+  height: 3rem;
   width: 100%;
   color: black;
   background-color: white;
@@ -17,6 +17,9 @@ const FooterStyles = styled.footer`
       justify-content: space-between;
       align-items: center;
       margin: 0 0.5rem;
+      a {
+        color: black;
+      }
       .icon-container {
         display: flex;
         flex-direction: row;
