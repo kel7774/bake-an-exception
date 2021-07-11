@@ -72,7 +72,7 @@ function DeliveryInfo ({ register, errors }) {
               {...register('deliveryInstructions')}
               type='text'
               name='deliveryInstructions'
-              placeholder='Delivery Instructions (optional)'
+              placeholder='Enter in any special delivery instructions...'
             />
           </div>
         </div>

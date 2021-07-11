@@ -1,4 +1,5 @@
 import React from 'react'
+import { sizes } from '../../helpers/options'
 import CakeFormStyles from '../../styles/CakeFormStyles'
 
 function CakeForm ({
@@ -9,23 +10,20 @@ function CakeForm ({
     <CakeFormStyles className='cake-form'>
       <div className='dropdown-container'>
         <div className='fieldLabel'>
-          <label htmlFor='size'><span>Choose Size:</span></label>
+          <label htmlFor='size'>Size:</label>
           <select
             name='size'
             id='size'
             {...register('size', { required: true })}
           >
-            <option value='Round - 6in'>Round - 6in</option>
-            <option value='Round - 8in'>Round - 8in</option>
-            <option value='Round - 10in'>Round - 10in</option>
-            <option value='Sheet - Serves 6'>Sheet - Serves 6</option>
-            <option value='Sheet - Serves 8'>Sheet - Serves 8</option>
-            <option value='Sheet - Serves 10'>Sheet - Serves 10</option>
+            {sizes.map((size, i) => (
+              <option key={i} value={size}>{size}</option>
+            ))}
           </select>
           {errors.tiers && 'Must select a size.'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='tiers'><span>Choose Tiers</span></label>
+          <label htmlFor='tiers'>Tier(s)</label>
           <select
             name='tiers'
             id='tiers'
@@ -38,7 +36,7 @@ function CakeForm ({
           {errors.tiers && 'Must select number of tiers'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='layers'><span>Choose Layers*</span></label>
+          <label htmlFor='layers'>Layers*</label>
           <select
             name='layers'
             id='layers'
@@ -54,7 +52,7 @@ function CakeForm ({
       </div>
       <div className='text-container'>
         <div className='fieldLabel'>
-          <label htmlFor='flavors'><span>Cake Flavor Requests:</span></label>
+          <label htmlFor='flavors'>Cake Flavor(s)</label>
           <textarea
             type='text'
             name='flavors'
@@ -64,7 +62,7 @@ function CakeForm ({
           {errors.flavors && 'Must enter in desired flavor(s)'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='fillings'><span>Filling Requests:</span></label>
+          <label htmlFor='fillings'>Filling(s)</label>
           <textarea
             type='text'
             name='fillings'
@@ -74,7 +72,7 @@ function CakeForm ({
           {errors.fillings && 'Must enter in desired filling(s)'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='color-theme'><span>Theme Request:</span></label>
+          <label htmlFor='color-theme'>Theme</label>
           <textarea
             type='text'
             name='theme'

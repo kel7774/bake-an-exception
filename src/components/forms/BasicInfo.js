@@ -8,7 +8,7 @@ function BasicInfo ({
   return (
     <BasicInfoStyles className='basic-info-container'>
       <div className='fieldLabel'>
-        <label htmlFor='firstName'><span>First Name</span></label>
+        <label htmlFor='firstName'>First Name</label>
         <input
           type='text'
           name='firstName'
@@ -18,7 +18,7 @@ function BasicInfo ({
         {errors.firstName && 'First name is required.'}
       </div>
       <div className='fieldLabel'>
-        <label htmlFor='lastName'><span>Last Name</span></label>
+        <label htmlFor='lastName'>Last Name</label>
         <input
           type='text'
           name='lastName'
@@ -28,7 +28,7 @@ function BasicInfo ({
         {errors.lastName && 'Last name is required.'}
       </div>
       <div className='fieldLabel'>
-        <label htmlFor='email'><span>Email Address</span></label>
+        <label htmlFor='email'>Email Address</label>
         <input
           type='email'
           name='email'
@@ -44,7 +44,7 @@ function BasicInfo ({
         {errors.email && 'Email address is required.'}
       </div>
       <div className='fieldLabel'>
-        <label htmlFor='phoneNumber'><span>Phone Number</span></label>
+        <label htmlFor='phoneNumber'>Phone Number</label>
         <input
           type='tel'
           name='phoneNumber'

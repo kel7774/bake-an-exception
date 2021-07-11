@@ -8,3 +8,12 @@ export const fillingOptions = [
   'Blueberry',
   'Cream Cheese'
 ]
+
+export const sizes = [
+  'Round - 6in',
+  'Round - 8in',
+  'Round - 10in',
+  'Sheet - Serves 6',
+  'Sheet - Serves 8',
+  'Sheet - Serves 10'
+]

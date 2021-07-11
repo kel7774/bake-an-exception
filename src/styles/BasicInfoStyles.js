@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 const BasicInfoStyles = styled.div`
   display: flex;
+  flex-direction: row;
+  .fieldLabel {
+    margin: 0 0.7rem;
+  }
   .fieldLabel {
     display: flex;
     flex-direction: column;

@@ -11,7 +11,7 @@ const DeliveryInfoStyles = styled.div`
 }
 
 textarea {
-  width: 100%;
+  width: 32%;
   height: 5rem;
 }
 
@@ -19,6 +19,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: start;
+  margin-top: 1rem;
 }
 `
 

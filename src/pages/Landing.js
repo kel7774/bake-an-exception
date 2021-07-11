@@ -5,12 +5,12 @@ import Hero from '../components/Hero'
 function Landing () {
   return (
     <LandingStyles className='landing-page'>
-      <h1>
-        <span>Bake An Exception</span>
-      </h1>
+      <header>
+        Bake An Exception
+      </header>
       <Hero />
       <h3>
-        <span>Because dessert should come before anything else.</span>
+        Because dessert should come before anything else.
       </h3>
     </LandingStyles>
   )

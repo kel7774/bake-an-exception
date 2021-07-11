@@ -6,7 +6,7 @@ function CupcakeForm ({ register, errors }) {
   return (
     <CupcakeFormStyles className='cupcake-form'>
       <div className='fieldLabel'>
-        <label htmlFor='quantity'><span>Choose Quantity:*</span></label>
+        <label htmlFor='quantity'>Quantity:*</label>
         <select
           name='quantity'
           id='quantity'
@@ -21,7 +21,7 @@ function CupcakeForm ({ register, errors }) {
       </div>
       <div className='fillings-container'>
         <div className='fieldLabel'>
-          <label htmlFor='fillings'><span>How many fillings?</span></label>
+          <label htmlFor='fillings'>How many fillings?</label>
           <select
             name='fillings'
             id='fillings'
@@ -34,7 +34,7 @@ function CupcakeForm ({ register, errors }) {
           {errors.tiers && 'Must select number of fillings.'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='fillings-first'><span>Choose First Filling:</span></label>
+          <label htmlFor='fillings-first'>First Filling:</label>
           <select
             name='filling-1'
             id='filling-1'
@@ -47,7 +47,7 @@ function CupcakeForm ({ register, errors }) {
           {errors.filling1 && 'Must select a filling.'}
         </div>
         <div className='fieldLabel'>
-          <label htmlFor='fillings-second'><span>Choose Second Filling:</span></label>
+          <label htmlFor='fillings-second'>Second Filling:</label>
           <select
             name='filling2'
             id='filling2'
@@ -61,7 +61,7 @@ function CupcakeForm ({ register, errors }) {
         </div>
       </div>
       <div className='fieldLabel'>
-        <label htmlFor='icing'><span>Choose Icing:</span></label>
+        <label htmlFor='icing'>Icing:</label>
         <select
           name='icing'
           id='icing'
