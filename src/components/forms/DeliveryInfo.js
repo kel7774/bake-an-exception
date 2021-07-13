@@ -9,14 +9,12 @@ function DeliveryInfo ({ register, errors }) {
       <input
         {...register('Yes', { required: true })}
         type='radio'
-        value='yes'
         onClick={() => setChecked('Yes')}
         checked={checked === 'Yes'}
       />
       <input
         {...register('No', { required: true })}
         type='radio'
-        value='no'
         onClick={() => setChecked('No')}
         checked={checked === 'No'}
       />

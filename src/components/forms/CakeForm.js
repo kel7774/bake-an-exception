@@ -75,7 +75,7 @@ function CakeForm ({
           <label htmlFor='color-theme'>Theme</label>
           <textarea
             type='text'
-            name='theme'
+            name='colorTheme'
             placeholder='Describe your desired theme'
             {...register('theme', { required: true })}
           />
